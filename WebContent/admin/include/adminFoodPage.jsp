@@ -16,7 +16,7 @@
 			        <tr class="success">
 			            <th lay-data="{field:'id', width:100, sort:true}">ID</th>
 			            <th lay-data="{field:'image', width:200}">图片</th>
-			            <th lay-data="{field:'name', width:100">名称</th>
+			            <th lay-data="{field:'name', width:100}">名称</th>
 			            <th lay-data="{field:'price', width:100, sort:true}">价格</th>
                         <th lay-data="{field:'description', width:400}">描述</th>
 			        </tr>

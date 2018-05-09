@@ -14,14 +14,15 @@
 	    http://www.springframework.org/schema/context      
 	    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+	<!-- 激活已经在spring容器里注册的bean -->
 	<context:annotation-config />
 	<context:component-scan base-package="com.ssh" />
-	<tx:annotation-driven
-		transaction-manager="transactionManager" />
-		
-    <!--定义Hibernate的SessionFactory -->
-    <!-- SessionFactory使用的数据源为上面的数据源 -->
-    <!-- 指定了Hibernate的映射文件和配置信息 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sf"></property>
+	</bean>
+	<!--定义Hibernate的SessionFactory -->
 	<bean name="sf" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="ds" />
 		<!-- 注解扫描 -->
@@ -30,9 +31,11 @@
 				<value>com.ssh.*</value>
 			</list>
 		</property>
+		<!-- 自动生成表结构 -->
 		<property name="schemaUpdate">
 			<value>true</value>
 		</property>
+		<!-- Hibernate配置文件 -->
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.MySQLDialect
@@ -41,15 +44,11 @@
 			</value>
 		</property>
 	</bean>
-    <!-- 定义数据源的信息 -->
-    <bean name="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8" />
-        <property name="username" value="root" />
-        <property name="password" value="123456" />
-    </bean>
-    <!-- 配置事务管理器（声明式的事务） -->  
-    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">  
-        <property name="sessionFactory" ref="sf"></property>  
-    </bean>
+	<!-- 定义数据源信息 -->
+	<bean name="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+	</bean>
 </beans>
