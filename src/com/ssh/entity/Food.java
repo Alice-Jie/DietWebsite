@@ -50,7 +50,7 @@ public class Food {
 	@Override
 	public String toString() {
 		return "Food: ["
-			+ "id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
+			+ "id=" + id + ", name=" + name + ", price=" + price + ", description=" + description
 			+ "]";
 	}
 }

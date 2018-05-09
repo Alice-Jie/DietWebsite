@@ -78,8 +78,10 @@ public class FoodAction {
 	
 	@Action("admin_addFood")
     public String add() {
+		System.out.println(food);
 		foodService.addFood(food);
 		// 上传图片
+		/*
         File imageFolder= new File(ServletActionContext.getServletContext().getRealPath("img/food"));
         File file = new File(imageFolder, "food_" + food.getId() + ".jpg");
         try {
@@ -89,6 +91,7 @@ public class FoodAction {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
         return "foodList";
     }  
 }

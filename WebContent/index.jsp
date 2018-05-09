@@ -8,8 +8,7 @@
 </head>
 <body>
 <h1>Test</h1>
-http://localhost:8080/DietWebsite/JSP/admin/index.jsp
+http://localhost:8080/DietWebsite/admin/index.jsp
 </br>
-http://localhost:8080/DietWebsite/JSP/admin/listFood.jsp
 </body>
 </html>

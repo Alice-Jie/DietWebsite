@@ -11,12 +11,12 @@
     </ul>
     <div class="layui-tab-content">
         <div class="layui-tab-item layui-show">
-			<table class="layui-table" lay-filter="list">
+			<table class="layui-table" lay-filter="foodList">
 			    <thead>
 			        <tr class="success">
 			            <th lay-data="{field:'id', width:100, sort:true}">ID</th>
 			            <th lay-data="{field:'image', width:200}">图片</th>
-			            <th lay-data="{field:'name', width:100, sort:true}">名称</th>
+			            <th lay-data="{field:'name', width:100">名称</th>
 			            <th lay-data="{field:'price', width:100, sort:true}">价格</th>
                         <th lay-data="{field:'description', width:400}">描述</th>
 			        </tr>
@@ -35,28 +35,38 @@
 			</table>
         </div>
         <div class="layui-tab-item">
-			<form class="layui-form" action="">
+			<form class="layui-form" method="post" action="../admin_addFood" enctype="multipart/form-data">
+                <!--
+                <label class="layui-form-label">图片：</label>
+                <button type="button" id="uploadImg" class="layui-btn">
+                    <i class="layui-icon">&#xe67c;</i>上传图片
+                </button>
+                -->
+                <!-- 菜品名称 -->
 				<div class="layui-form-item">
 					<label class="layui-form-label">名称：</label>
 					<div class="layui-input-block">
-						<input type="text" name="title" required  lay-verify="required" placeholder="请输入菜品名称" autocomplete="off" class="layui-input">
+						<input type="text" name="food.name" required  lay-verify="required" placeholder="请输入菜品名称" autocomplete="off" class="layui-input">
 					</div>
 				</div>
+                <!-- 菜品价格 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">价格：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入菜品价格" autocomplete="off" class="layui-input">
+                        <input type="text" name="food.price" required  lay-verify="required" placeholder="请输入菜品价格" autocomplete="off" class="layui-input">
                     </div>
                 </div>
+                <!-- 菜品描述 -->
 				<div class="layui-form-item layui-form-text">
 					<label class="layui-form-label">描述：</label>
 					<div class="layui-input-block">
-						<textarea name="desc" placeholder="请输入菜品内容" class="layui-textarea"></textarea>
+						<textarea name="food.description" placeholder="请输入菜品内容" class="layui-textarea"></textarea>
 					</div>
 				</div>
+                <!-- 提交&重置 -->
 				<div class="layui-form-item">
 					<div class="layui-input-block">
-						<button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+						<button type="submit" class="layui-btn" lay-submit lay-filter="addFood">提交</button>
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
