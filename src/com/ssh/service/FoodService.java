@@ -14,4 +14,7 @@ public interface FoodService {
 	/** 添加菜品信息 */
 	public void addFood(Food food);
 	
+	/** 删除菜品信息 */
+	public void delFood(Food food);
+	
 }

@@ -26,7 +26,8 @@ import com.ssh.web.Page;
 @ParentPackage("mypack")
 @Results(
 		{ 
-			@Result(name = "foodList", location = "/admin/foodList.jsp"), 
+			@Result(name = "foodList", location = "/admin/foodList.jsp"),
+			@Result(name="foodListPage", type = "redirect", location="/admin_foodList")
 		})
 public class FoodAction {
 
@@ -70,28 +71,34 @@ public class FoodAction {
 	/* 控制器 */
 
 	@Action("admin_foodList")
-	public String list() {
+	public String foodList() {
 		foods = foodService.getFoodList();
-		System.out.println(foods);
+		// System.out.println(foods);
 		return "foodList";
 	}
 	
 	@Action("admin_addFood")
-    public String add() {
-		System.out.println(food);
+    public String addFood() {
 		foodService.addFood(food);
+		// System.out.println(food);
 		// 上传图片
-		/*
         File imageFolder= new File(ServletActionContext.getServletContext().getRealPath("img/food"));
         File file = new File(imageFolder, "food_" + food.getId() + ".jpg");
         try {
             FileUtils.copyFile(img, file);
             BufferedImage img = ImageUtil.change2jpg(file);
             ImageIO.write(img, "jpg", file);
+            // System.out.println("上传成功！");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
-        return "foodList";
+        return "foodListPage";
     }  
+	
+	@Action("admin_delFood")
+	public String delFood() {
+		foodService.delFood(food);
+		return "foodListPage";
+	}
+	
 }

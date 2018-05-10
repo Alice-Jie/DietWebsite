@@ -14,10 +14,11 @@ layui.define(['layer', 'form', 'element', 'table', 'upload'], function (exports)
         , page: true        // 启用分页
     });
 
+    /*
     // 上传图片
     var uploadInst = upload.render({
-        elem: '#uploadImg'    // 绑定元素
-        , url: '/upload/'  // 上传接口
+        elem: '#uploadImg'  // 绑定元素
+        , url: 'http://127.0.0.1:8080/DietWebsite/img/food'   // 上传接口
         , done: function (res, index, upload) {
             // 上传完毕回调
         }
@@ -25,7 +26,7 @@ layui.define(['layer', 'form', 'element', 'table', 'upload'], function (exports)
             // 请求异常回调
         }
     });
-
+    */
     // 提交表单
     form.on('submit(addFood)', function (data) {
     	console.log(data);

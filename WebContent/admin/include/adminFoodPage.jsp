@@ -4,10 +4,8 @@
 <!-- 选项卡 -->
 <div class="layui-tab">
     <ul class="layui-tab-title">
-        <li>查询菜品</li>
+        <li>菜品信息</li>
         <li>添加菜品</li>
-        <li>修改菜品</li>
-        <li>删除菜品</li>
     </ul>
     <div class="layui-tab-content">
         <div class="layui-tab-item layui-show">
@@ -19,6 +17,8 @@
 			            <th lay-data="{field:'name', width:100}">名称</th>
 			            <th lay-data="{field:'price', width:100, sort:true}">价格</th>
                         <th lay-data="{field:'description', width:400}">描述</th>
+                        <th lay-data="{field:'edit', width:100}">编辑</th>
+                        <th lay-data="{field:'delete', width:100}">删除</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -29,6 +29,8 @@
 			            <td>${food.name}</td>
                         <td>${food.price}</td>
                         <td>${food.description}</td>
+                        <td><a href=""><i class="layui-icon">&#xe642;</i></a></td>
+                        <td><a href="../admin_delFood?food.id=${food.id}"><i class="layui-icon">&#xe640;</i></a></td>
 			        </tr>
 			        </c:forEach>
 			    </tbody>
@@ -36,12 +38,18 @@
         </div>
         <div class="layui-tab-item">
 			<form class="layui-form" method="post" action="../admin_addFood" enctype="multipart/form-data">
-                <!--
-                <label class="layui-form-label">图片：</label>
-                <button type="button" id="uploadImg" class="layui-btn">
-                    <i class="layui-icon">&#xe67c;</i>上传图片
-                </button>
-                -->
+			    <!-- 菜品图片 -->
+                <div class="layui-form-item">
+	                <label class="layui-form-label">图片：</label>
+	                <div class="layui-input-block">
+	                    <input id="foodImg" type="file" name="img" />
+	                <!--
+                        <button type="button" class="layui-btn layui-btn-primary" id="uploadImg">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                    -->
+                    </div>
+                </div>
                 <!-- 菜品名称 -->
 				<div class="layui-form-item">
 					<label class="layui-form-label">名称：</label>
@@ -72,7 +80,5 @@
 				</div>
 			</form>
         </div>
-        <div class="layui-tab-item">update</div>
-        <div class="layui-tab-item">delete</div>
     </div>
 </div>

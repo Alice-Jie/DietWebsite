@@ -37,4 +37,8 @@ public class FoodServiceImpl implements FoodService {
 		dao.save(food);
 	}
 	
+	/** 删除菜品信息 */
+	public void delFood(Food food) {
+		dao.delete(food);
+	}
 }
