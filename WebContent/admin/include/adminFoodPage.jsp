@@ -25,11 +25,11 @@
 			    <c:forEach items="${foods}" var="food">
 			        <tr>
 			            <td>${food.id}</td>
-			            <td><img src="../img/food/food_${food.id}.jpg" weight="45px" height="45px"></td>
+			            <td><a href="../img/food/food_${food.id}.jpg"><img src="../img/food/food_${food.id}.jpg" weight="45px" height="45px"></a></td>
 			            <td>${food.name}</td>
                         <td>${food.price}</td>
                         <td>${food.description}</td>
-                        <td><a href=""><i class="layui-icon">&#xe642;</i></a></td>
+                        <td><a href="../admin_editFood?food.id=${food.id}"><i class="layui-icon">&#xe642;</i></a></td>
                         <td><a href="../admin_delFood?food.id=${food.id}"><i class="layui-icon">&#xe640;</i></a></td>
 			        </tr>
 			        </c:forEach>

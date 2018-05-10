@@ -19,6 +19,17 @@ public class FoodServiceImpl implements FoodService {
 	@Autowired
 	DAOImpl dao;
 
+	/** 
+	 * 获取菜品信息
+	 * @param cl 实体类
+	 * @param id 索引ID
+	 * @return ID对应对象
+	 */
+	 @Override
+	 public Food getFood(Class cl, int id) {
+		 return (Food)dao.get(cl, id);
+	 }
+	
 	/**
 	 * 获取菜品列表
 	 * @return 菜品列表

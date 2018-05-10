@@ -69,7 +69,7 @@ public class FoodAction {
 	}
 	
 	/* 控制器 */
-
+	
 	@Action("admin_foodList")
 	public String foodList() {
 		foods = foodService.getFoodList();
@@ -93,7 +93,17 @@ public class FoodAction {
             e.printStackTrace();
         }
         return "foodListPage";
-    }  
+    }
+	
+    @Action("admin_editFood")
+    public String editFood() {
+    	System.out.println(food);
+        int id = food.getId();
+        System.out.println(id);
+        food = foodService.getFood(Food.class,id);
+        // 尚未重定向
+        return "";
+    }
 	
 	@Action("admin_delFood")
 	public String delFood() {
