@@ -1,4 +1,4 @@
-package com.ssh.unit;
+package com.ssh.util;
 
 public class Page {
 
@@ -9,7 +9,7 @@ public class Page {
 
 	private static final int DEFAULTCOUNT = 5; // 默认每页显示5条
 
-	/* set、get */
+	/* setter、getter */
 
 	public int getStart() {
 		return start;

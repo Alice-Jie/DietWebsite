@@ -34,7 +34,7 @@
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">描述：</label>
                     <div class="layui-input-block">
-                        <textarea name="food.description" value="${food.description}" class="layui-textarea"></textarea>
+                        <textarea name="food.description" class="layui-textarea">${food.description}</textarea>
                     </div>
                 </div>
                 <!-- 提交&重置 -->

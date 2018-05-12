@@ -1,4 +1,4 @@
-package com.ssh.unit;
+package com.ssh.util;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -16,6 +16,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**TODO
+ * @author：Alice
+ * @date: 2018年5月7日
+ * @version 0.0.1
+ * @description：实现文件上传
+ */
 public class ImageUtil {
 
 	public static BufferedImage change2jpg(File f) {

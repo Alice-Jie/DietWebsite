@@ -11,6 +11,12 @@ import com.ssh.service.BaseService;
 
 import java.util.List;
 
+/**TODO
+ * @author：Alice
+ * @date: 2018年5月12日
+ * @version 0.0.1
+ * @description：实现业务层BaseService接口
+ */
 @Service
 public class BaseServiceImpl implements BaseService {
 

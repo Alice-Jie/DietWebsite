@@ -1,69 +1,26 @@
 package com.ssh.action;
 
-import java.util.List;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
+ 
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.ParentPackage;
-import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Results;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ssh.entity.Food;
-import com.ssh.service.FoodService;
-import com.ssh.unit.ImageUtil;
+import com.ssh.entity.*;
 
-@Namespace("/")
-@ParentPackage("mypack")
-@Results({ 
-		@Result(name = "foodList", location = "/admin/foodList.jsp"),
-		@Result(name = "foodListPage", type = "redirect", location = "/admin_foodList"),
-		@Result(name = "editFood", location = "/admin/editFood.jsp"), 
-})
-public class FoodAction {
+import com.ssh.util.ImageUtil;
 
-	@Autowired
-	FoodService foodService;
-
-	Food food;        // 菜品信息
-	List<Food> foods; // 菜品列表
-
-	File img;  // 图片文件对象
-
-	/* set、get */
-
-	public List<Food> getFoods() {
-		return foods;
-	}
-
-	public void setFoods(List<Food> foods) {
-		this.foods = foods;
-	}
-
-	public Food getFood() {
-		return food;
-	}
-
-	public void setFood(Food food) {
-		this.food = food;
-	}
-
-	public File getImg() {
-		return img;
-	}
-
-	public void setImg(File img) {
-		this.img = img;
-	}
-
-	/* 控制器 */
+/**TODO
+ * @author：Alice
+ * @date: 2018年5月12日
+ * @version 0.0.2
+ * @description：继承ActionResult，专注于处理Controller
+ */
+public class FoodAction extends ActionResult {
 
 	// 添加菜品信息
 	@Action("admin_addFood")

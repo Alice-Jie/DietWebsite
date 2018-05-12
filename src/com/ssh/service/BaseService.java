@@ -2,8 +2,12 @@ package com.ssh.service;
 
 import java.util.List;
 
-import com.ssh.entity.Food;
-
+/**TODO
+ * @author：Alice
+ * @date: 2018年5月12日
+ * @version 0.0.1
+ * @description：在业务层提供访问DAO层Service接口
+ */
 public interface BaseService {
 	
 	/** 添加数据 */
