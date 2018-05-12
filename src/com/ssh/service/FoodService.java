@@ -3,8 +3,7 @@ package com.ssh.service;
 import java.util.List;
 
 import com.ssh.entity.Food;
-
-import com.ssh.web.Page;
+import com.ssh.unit.Page;
 
 public interface FoodService {
 
@@ -22,7 +21,11 @@ public interface FoodService {
 	/** 添加菜品信息 */
 	public void addFood(Food food);
 	
+	/** 编辑菜品信息 */
+	public void updateFood(Food food);
+	
 	/** 删除菜品信息 */
 	public void delFood(Food food);
+	
 	
 }

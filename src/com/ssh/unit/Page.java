@@ -1,4 +1,4 @@
-package com.ssh.web;
+package com.ssh.unit;
 
 public class Page {
 

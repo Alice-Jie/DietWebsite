@@ -4,7 +4,7 @@
 <!-- 选项卡 -->
 <div class="layui-tab">
     <ul class="layui-tab-title">
-        <li>菜品信息</li>
+        <li class="layui-this">菜品信息</li>
         <li>添加菜品</li>
     </ul>
     <div class="layui-tab-content">
@@ -12,13 +12,13 @@
 			<table class="layui-table" lay-filter="foodList">
 			    <thead>
 			        <tr class="success">
-			            <th lay-data="{field:'id', width:100, sort:true}">ID</th>
-			            <th lay-data="{field:'image', width:200}">图片</th>
-			            <th lay-data="{field:'name', width:100}">名称</th>
-			            <th lay-data="{field:'price', width:100, sort:true}">价格</th>
-                        <th lay-data="{field:'description', width:400}">描述</th>
-                        <th lay-data="{field:'edit', width:100}">编辑</th>
-                        <th lay-data="{field:'delete', width:100}">删除</th>
+			            <th lay-data="{field:'id', width:'10%', sort:true}">ID</th>
+			            <th lay-data="{field:'image', width:'10%'}">图片</th>
+			            <th lay-data="{field:'name', width:'10%'}">名称</th>
+			            <th lay-data="{field:'price', width:'10%', sort:true}">价格</th>
+                        <th lay-data="{field:'description', width:'40%'}">描述</th>
+                        <th lay-data="{field:'edit', width:'10%'}">操作</th>
+                        <th lay-data="{field:'delete', width:'10%'}">删除</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -36,6 +36,14 @@
 			    </tbody>
 			</table>
         </div>
+		<script>
+        // 表单数据格式化
+        table.init('foodList', {
+            height: 'full-210'  // 设置高度
+            , cellMinWidth: 80  // 最小宽度
+            , page: true        // 启用分页
+        });
+        </script>
         <div class="layui-tab-item">
 			<form class="layui-form" method="post" action="../admin_addFood" enctype="multipart/form-data">
 			    <!-- 菜品图片 -->

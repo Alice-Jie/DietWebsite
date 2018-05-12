@@ -1,4 +1,4 @@
-package com.ssh.web;
+package com.ssh.unit;
 
 import java.awt.Image;
 import java.awt.Toolkit;

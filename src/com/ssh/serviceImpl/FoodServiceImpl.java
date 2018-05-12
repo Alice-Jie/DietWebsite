@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 import com.ssh.daoImpl.DAOImpl;
 import com.ssh.entity.Food;
 import com.ssh.service.FoodService;
-
-import com.ssh.web.Page;
+import com.ssh.unit.Page;
 
 @Service
 public class FoodServiceImpl implements FoodService {
@@ -46,6 +45,12 @@ public class FoodServiceImpl implements FoodService {
 	@Override
 	public void addFood(Food food) {
 		dao.save(food);
+	}
+	
+	/** 编辑菜品信息 */
+	@Override
+	public void updateFood(Food food) {
+		dao.update(food);
 	}
 	
 	/** 删除菜品信息 */

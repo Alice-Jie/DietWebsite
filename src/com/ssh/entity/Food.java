@@ -12,10 +12,13 @@ import javax.persistence.Table;
 public class Food {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "FoodID")
 	int id;             // 菜品ID
+	@Column(name = "FoodName")
 	String name;        // 菜品名字
+	@Column(name = "FoodPrice")
 	String price;       // 菜品价格
+	@Column(name = "FoodDescribe")
 	String description; // 菜品描述
 
 	/* set、get */
