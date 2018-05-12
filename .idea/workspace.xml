@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18f0f79-a75d-4af0-a932-2f66cb246d39" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/com/ssh/web/ImageUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/com/ssh/web/Page.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/ssh/web/ImageUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/ssh/web/Page.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/action/FoodAction.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/action/FoodAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/entity/Food.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/entity/Food.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/service/FoodService.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/service/FoodService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/FoodServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/FoodServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/admin/foodList.jsp" afterPath="$PROJECT_DIR$/WebContent/admin/foodList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp" afterPath="$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/index.js" afterPath="$PROJECT_DIR$/WebContent/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/action/FoodAction.java" afterPath="$PROJECT_DIR$/src/com/ssh/action/FoodAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/entity/Food.java" afterPath="$PROJECT_DIR$/src/com/ssh/entity/Food.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/service/FoodService.java" afterPath="$PROJECT_DIR$/src/com/ssh/service/FoodService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/FoodServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/FoodServiceImpl.java" />
     </list>
@@ -41,8 +32,8 @@
       <file leaf-file-name="adminFoodPage.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53223914">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+            <state vertical-scroll-proportion="-0.51465416">
+              <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -51,7 +42,7 @@
       <file leaf-file-name="adminEditFood.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminEditFood.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.571428">
+            <state vertical-scroll-proportion="0.0">
               <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding />
             </state>
@@ -61,7 +52,7 @@
       <file leaf-file-name="foodList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/admin/foodList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.678572">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               <folding />
             </state>
@@ -71,7 +62,7 @@
       <file leaf-file-name="editFood.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/admin/editFood.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.857142">
+            <state vertical-scroll-proportion="0.0">
               <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
@@ -160,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -307,7 +299,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,6 +418,38 @@
     <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminEditFood.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/admin/foodList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/admin/editFood.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
           <folding />
         </state>
@@ -444,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -468,7 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -508,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminEditFood.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.571428">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding />
         </state>
@@ -576,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/admin/editFood.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.857142">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding />
         </state>
@@ -584,7 +603,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/admin/foodList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.678572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding />
         </state>
@@ -592,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/admin/include/adminFoodPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53223914">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+        <state vertical-scroll-proportion="-0.51465416">
+          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
           <folding />
         </state>
       </provider>

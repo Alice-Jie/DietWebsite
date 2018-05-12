@@ -19,23 +19,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.ssh.entity.Food;
 import com.ssh.service.FoodService;
 import com.ssh.unit.ImageUtil;
-import com.ssh.unit.Page;
 
 @Namespace("/")
 @ParentPackage("mypack")
-@Results({ @Result(name = "foodList", location = "/admin/foodList.jsp"),
+@Results({ 
+		@Result(name = "foodList", location = "/admin/foodList.jsp"),
 		@Result(name = "foodListPage", type = "redirect", location = "/admin_foodList"),
-		@Result(name = "editFood", location = "/admin/editFood.jsp"), })
+		@Result(name = "editFood", location = "/admin/editFood.jsp"), 
+})
 public class FoodAction {
 
 	@Autowired
 	FoodService foodService;
 
+	Food food;        // 菜品信息
 	List<Food> foods; // 菜品列表
-	Food food; // 彩屏信息
 
-	File img; // 图片文件对象
-	Page page;
+	File img;  // 图片文件对象
 
 	/* set、get */
 
@@ -63,27 +63,12 @@ public class FoodAction {
 		this.img = img;
 	}
 
-	public Page getPage() {
-		return page;
-	}
-
-	public void setPage(Page page) {
-		this.page = page;
-	}
-
 	/* 控制器 */
 
-	@Action("admin_foodList")
-	public String foodList() {
-		foods = foodService.getFoodList();
-		// System.out.println(foods);
-		return "foodList";
-	}
-
+	// 添加菜品信息
 	@Action("admin_addFood")
 	public String addFood() {
-		foodService.addFood(food);
-		// System.out.println(food);
+		foodService.addData(food);
 		// 上传图片
 		File imageFolder = new File(ServletActionContext.getServletContext().getRealPath("img/food"));
 		File file = new File(imageFolder, "food_" + food.getId() + ".jpg");
@@ -91,25 +76,39 @@ public class FoodAction {
 			FileUtils.copyFile(img, file);
 			BufferedImage img = ImageUtil.change2jpg(file);
 			ImageIO.write(img, "jpg", file);
-			// System.out.println("上传成功！");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return "foodListPage";
 	}
 
+	// 删除菜品信息
+	@Action("admin_delFood")
+	public String delFood() {
+		foodService.delData(food);
+		return "foodListPage";
+	}
+
+	// 菜品信息列表
+	@Action("admin_foodList")
+	public String foodList() {
+		foods = foodService.getDataList();
+		return "foodList";
+	}
+
+	// 编辑菜品信息
 	@Action("admin_editFood")
 	public String editFood() {
 		int id = food.getId();
-		food = foodService.getFood(Food.class, id);
-		// System.out.println(food);
+		food = (Food) foodService.getData(id);
 		return "editFood";
 	}
 
+	// 更新菜品信息
 	@Action("admin_updateFood")
 	public String updateFood() {
-		// System.out.println(food);
-		foodService.updateFood(food);
+		foodService.updateData(food);
+		// 更新图片
 		if (null != img) {
 			File imageFolder = new File(ServletActionContext.getServletContext().getRealPath("img/food"));
 			File file = new File(imageFolder, "food_" + food.getId() + ".jpg");
@@ -121,12 +120,6 @@ public class FoodAction {
 				e.printStackTrace();
 			}
 		}
-		return "foodListPage";
-	}
-
-	@Action("admin_delFood")
-	public String delFood() {
-		foodService.delFood(food);
 		return "foodListPage";
 	}
 
