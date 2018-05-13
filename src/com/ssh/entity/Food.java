@@ -14,19 +14,29 @@ import javax.persistence.Table;
  * @description：在Hibernate层建立映射关系
  */
 @Entity
-@Table(name = "food")
+@Table(name = "Food")
 public class Food {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "FoodID")
-	int id;              // 菜品ID
+	private int id;              // 菜品ID
 	@Column(name = "FoodName")
-	String name;         // 菜品名字
+	private String name;         // 菜品名字
 	@Column(name = "FoodPrice")
-	String price;        // 菜品价格
+	private String price;        // 菜品价格
 	@Column(name = "FoodDescribe")
-	String description;  // 菜品描述
-
+	private String description;  // 菜品描述
+	@Column(name = "FoodCa")
+	private int ca;              // 营养-钙
+	@Column(name = "FoodFe")
+	private int fe;              // 营养-铁
+	@Column(name = "FoodZn")
+	private int zn;              // 营养-锌
+	@Column(name = "FoodSe")
+	private int se;              // 营养-硒
+	@Column(name = "FoodVit")
+	private int vit;             // 营养-维生素
+	
 	/* setter、getter */
 
 	public int getId() {
@@ -61,10 +71,67 @@ public class Food {
 		this.description = description;
 	}
 
-	/* 调试 */
+	public int getCa() {
+		return ca;
+	}
 
+	public void setCa(int ca) {
+		this.ca = ca;
+	}
+
+	public int getFe() {
+		return fe;
+	}
+
+	public void setFe(int fe) {
+		this.fe = fe;
+	}
+
+	public int getZn() {
+		return zn;
+	}
+
+	public void setZn(int zn) {
+		this.zn = zn;
+	}
+
+	public int getSe() {
+		return se;
+	}
+
+	public void setSe(int se) {
+		this.se = se;
+	}
+
+	public int getVit() {
+		return vit;
+	}
+
+	public void setVit(int vit) {
+		this.vit = vit;
+	}
+
+	
+	/**
+	 * 打印属性
+	 * @return 属性列表
+	 */
 	@Override
 	public String toString() {
-		return "Food: [" + "id=" + id + ", name=" + name + ", price=" + price + ", description=" + description + "]";
+		String console = 
+				"————————————————————————\n"
+				+ "Food: \n"
+				+ "id: "          + id          + "\n"
+				+ "name: "        + name        + "\n"
+				+ "price: "       + price       + "\n"
+				+ "description: " + description + "\n"
+				+ "ca: "          + ca 	        + "\n"
+				+ "fe: "          + fe          + "\n"
+				+ "zn: "          + zn          + "\n"
+				+ "se: "          + se          + "\n"
+				+ "vit: "         + vit         + "\n"
+				+ "————————————————————————\n"
+				;
+		return console;
 	}
 }
