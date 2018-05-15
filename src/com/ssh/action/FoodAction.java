@@ -3,25 +3,26 @@ package com.ssh.action;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
- 
+
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 
-import com.ssh.entity.*;
+import com.ssh.entity.Food;
 
 import com.ssh.util.ImageUtil;
 
-/**TODO
+/**
+ * TODO
+ * 
  * @author：Alice
  * @date: 2018年5月12日
  * @version 0.0.2
  * @description：继承ActionResult，专注于处理Controller
  */
 public class FoodAction extends ActionResult {
-
 	// 添加菜品信息
 	@Action("admin_addFood")
 	public String addFood() {
@@ -79,5 +80,4 @@ public class FoodAction extends ActionResult {
 		}
 		return "foodListPage";
 	}
-
 }

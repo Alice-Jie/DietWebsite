@@ -2,7 +2,7 @@ package com.ssh.action;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ssh.service.FoodService;
+import com.ssh.service.*;
 
 /**TODO
  * @author：Alice
@@ -13,6 +13,9 @@ import com.ssh.service.FoodService;
 public class ActionService extends ActionEntity {
 
 	@Autowired
-	FoodService foodService;  // 菜品Service层
+	protected MemberService memberService;  // 会员信息Service层
+	
+	@Autowired
+	protected FoodService foodService;      // 菜品Service层
 	
 }

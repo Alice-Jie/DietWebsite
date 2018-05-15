@@ -25,29 +25,25 @@
 <div class="layui-layout layui-layout-admin">
     <!-- 顶部 -->
     <div class="layui-header header">
-        <%@include file="../admin/include/adminHeader.jsp" %>
+        <%@include file="../admin/include/header.jsp" %>
 	</div>
     <!-- 左侧导航栏 -->
     <div class="layui-side layui-bg-black">
-        <%@include file="../admin/include/adminNavigator.jsp" %>
+        <%@include file="../admin/include/navigator.jsp" %>
     </div>
     <!-- 主体内容 -->
 	<div class="layui-body layui-form">
-        <%@include file="../admin/include/adminFoodPage.jsp" %>
+        <%@include file="../admin/include/foodPage.jsp" %>
 	</div>
     <!-- 底部 -->
     <div class="layui-footer footer layui-bg-black">
-        <%@include file="../admin/include/adminFooter.jsp" %>
+        <%@include file="../admin/include/footer.jsp" %>
     </div>
 </div>
 <script>
     layui.config({
         base: '../js/' // 模块的目录
     }).use('index');   // 加载入口
-    
-    layui.use(['table'], function() {
-    	var table = layui.table;
-    });
 </script>
 </body>
 </html>

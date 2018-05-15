@@ -1,6 +1,6 @@
 package com.ssh.entity;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ import javax.persistence.Table;
  * @description：在Hibernate层建立映射关系
  */
 @Entity
-@Table(name = "Member")
+@Table(name = "member")
 public class Member {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class Member {
 	@Column(name = "MemberSex")
 	private String sex;     // 会员性别
 	@Column(name = "MemberEmail")
-	private String Email;   // 会员电子邮箱
+	private String email;   // 会员电子邮箱
 	@Column(name = "MemberPhone")
 	private String phone;   // 会员电话
 	@Column(name = "MemberDate")
@@ -44,48 +44,63 @@ public class Member {
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getAccount() {
 		return account;
 	}
+
 	public void setAccount(String account) {
 		this.account = account;
 	}
+
 	public String getPwd() {
 		return pwd;
 	}
+
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getSex() {
 		return sex;
 	}
+
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
+
 	public String getEmail() {
-		return Email;
+		return email;
 	}
+
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public Date getDate() {
 		return date;
 	}
+
 	public void setDate(Date date) {
 		this.date = date;
 	}
@@ -104,7 +119,7 @@ public class Member {
 				+ "password: "    + pwd              + "\n"
 				+ "name: "        + name             + "\n"
 				+ "sex: "         + sex              + "\n"
-				+ "Email: "       + Email            + "\n"
+				+ "Email: "       + email            + "\n"
 				+ "phone: "       + phone            + "\n"
 				+ "date: "        + date.toString()  + "\n"
 				+ "————————————————————————\n"

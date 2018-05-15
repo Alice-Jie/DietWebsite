@@ -21,7 +21,7 @@ import java.util.List;
 public class BaseServiceImpl implements BaseService {
 
 	@Autowired
-	DAOImpl dao;
+	protected DAOImpl dao;
 
 	protected Class cl;
 
@@ -34,14 +34,13 @@ public class BaseServiceImpl implements BaseService {
 			try {
 				Class serviceImplClass = Class.forName(serviceImpleClassName);
 				String serviceImpleClassSimpleName = serviceImplClass.getSimpleName();
-				// System.out.println("serviceImpleClassSimpleName:" +
-				// serviceImpleClassSimpleName);
 				String entitySimpleName = serviceImpleClassSimpleName.replaceAll("ServiceImpl", "");
-				// System.out.println("entitySimpleName:" + entitySimpleName);
 				String entityPackageName = serviceImplClass.getPackage().getName().replaceAll(".serviceImpl",
 						".entity");
-				// System.out.println("entityPackageName:" + entityPackageName);
 				String entityFullName = entityPackageName + "." + entitySimpleName;
+				// System.out.println("serviceImpleClassSimpleName:" + serviceImpleClassSimpleName);
+				// System.out.println("entitySimpleName:" + entitySimpleName);
+				// System.out.println("entityPackageName:" + entityPackageName);
 				// System.out.println("entityFullName:" + entityFullName);
 				cl = Class.forName(entityFullName);
 			} catch (ClassNotFoundException e1) {
@@ -56,7 +55,7 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	public static void main(String[] args) {
-		// new FoodServiceImpl().showClass();
+		// new MemberServiceImpl().showClass();
 	}
 
 	@Override
@@ -81,7 +80,7 @@ public class BaseServiceImpl implements BaseService {
 
 	@Override
 	public List<Object> getDataList() {
-		DetachedCriteria query = DetachedCriteria.forClass(Food.class);
+		DetachedCriteria query = DetachedCriteria.forClass(cl);
 		query.addOrder(Order.desc("id")); // 根据ID排序
 		return dao.findByCriteria(query);
 	}
