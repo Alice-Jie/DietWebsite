@@ -11,9 +11,15 @@
                 <span class="layui-nav-more"></span>
             </a>
             <dl class="layui-nav-child">
-                <dd><a href="../admin_memberList">会员管理</a></dd>
-                <dd><a href="../admin_foodList">菜品管理</a></dd>
+                <dd><a href="../admin_memberList"><i class="layui-icon">&#xe770;</i><cite> 会员管理</cite></a></dd>
+                <dd><a href="../admin_staffList"><i class="layui-icon">&#xe606;</i><cite> 员工管理</cite></a></dd>
+                <dd><a href="../admin_foodList"><i class="layui-icon">&#xe62e;</i><cite> 菜品管理</cite></a></dd>
             </dl>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="../admin_editAdmin">
+                <i class="layui-icon">&#xe66f;</i><cite> 管理员</cite>
+            </a>
         </li>
     </ul>
 </div>

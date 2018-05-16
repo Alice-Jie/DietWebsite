@@ -18,7 +18,7 @@ import javax.persistence.Table;
  * @description：在Hibernate层建立映射关系
  */
 @Entity
-@Table(name = "member")
+@Table(name = "Member")
 public class Member {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

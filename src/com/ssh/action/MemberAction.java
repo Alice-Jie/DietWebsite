@@ -35,7 +35,6 @@ public class MemberAction extends ActionResult {
 	@Action("admin_memberList")
 	public String memberList() {
 		members = memberService.getDataList();
-		System.out.println(members);
 		return "memberList";
 	}
 

@@ -19,29 +19,34 @@ public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "AdminID")
-	private int id;       // 管理员ID
-	@Column(name = "AdminName")
-	private String name;  // 管理员账号
+	private int id;          // 管理员ID
+	@Column(name = "AdminAccount")
+	private String account;  // 管理员账号
 	@Column(name = "AdminPwd")
-	private String pwd;   // 管理员密码
+	private String pwd;      // 管理员密码
 	
 	/* setter、getter */
-	
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public String getAccount() {
+		return account;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setAccount(String account) {
+		this.account = account;
 	}
+
 	public String getPwd() {
 		return pwd;
 	}
+
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
@@ -56,7 +61,7 @@ public class Admin {
 				"————————————————————————\n"
 				+ "Admin: \n"
 				+ "id: "          + id          + "\n"
-				+ "name: "        + name        + "\n"
+				+ "account: "     + account     + "\n"
 				+ "password: "    + pwd         + "\n"
 				+ "————————————————————————\n"
 				;

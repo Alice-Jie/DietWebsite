@@ -16,6 +16,12 @@ public class ActionService extends ActionEntity {
 	protected MemberService memberService;  // 会员信息Service层
 	
 	@Autowired
-	protected FoodService foodService;      // 菜品Service层
+	protected StaffService staffService;    // 员工信息Service层
+	
+	@Autowired
+	protected FoodService foodService;      // 菜品信息Service层
+	
+	@Autowired
+	protected AdminService adminService;    // 管理信息Service层
 	
 }
