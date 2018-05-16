@@ -12,7 +12,7 @@
 	<base href="<%=basePath%>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="../layui/css/layui.css">
-	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/admin.css">
 	<script src="../layui/layui.js"></script>
     <script>
 	// 主动加载jquery模块

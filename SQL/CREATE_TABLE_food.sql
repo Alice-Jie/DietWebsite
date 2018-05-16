@@ -1,7 +1,9 @@
-CREATE TABLE `NewTable` (
-  `id`  int(11) NOT NULL AUTO_INCREMENT ,
-  `name`  varchar(20) NULL ,
-  `price`  double(5,2) NULL ,
-  `description`  varchar(255) NULL ,
-  PRIMARY KEY (`id`)
+CREATE TABLE `Food` (
+	`FoodID`  bigint(4) NOT NULL AUTO_INCREMENT ,
+	`FoodName`  varchar(50) NOT NULL ,
+	`FoodPrice`  double(50,0) NULL ,
+	`FoodDescribe`  varchar(50) NULL ,
+	`FoodVit`  bigint(4) NULL ,
+	PRIMARY KEY (`FoodID`)
 );
+

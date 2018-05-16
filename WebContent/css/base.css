@@ -1,7 +1,152 @@
-.footer {
-	padding: 30px 0;
-	line-height: 30px;
-	text-align: center;
-	color: #666;
-	font-weight: 300;
+/* 顶部导航栏
+ ———————————————————————————————————————————————————————————————————————————— */
+
+.diet-logo {
+    width: 135px;
+    background: url(../img/logo.png) no-repeat left center;
+    height: 60px;
+}
+
+.diet-logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.diet-nav {
+    float: left;
+}
+
+/* 标签卡
+ ———————————————————————————————————————————————————————————————————————————— */
+.diet-main {
+    width: 1300px;
+}
+
+.diet-case-list {
+    width: 1300px;
+    min-height: 500px;
+}
+
+.diet-case-list li,
+.layer-ext-ul li {
+    margin: 15px 0 15px 0;
+    display: inline-block;
+    vertical-align: middle;
+    *display: inline;
+    *zoom: 1;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.diet-case-list li {
+    width: 250px;
+    margin: 10px 8px 10px 8px;
+    padding: 10px;
+}
+
+.diet-case-list li:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+
+/* 图片部分 */
+
+.diet-case-img {
+    position: relative;
+    display: block;
+}
+
+.diet-case-img img {
+    width: 100%;
+    height: 250px;
+}
+
+.diet-case-img i {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .2);
+    top: 40px;
+    left: 50%;
+    margin-left: -50px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.diet-case-img:hover i {
+    opacity: 1;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin-left: -24px;
+    top: 66px;
+}
+
+/* 图片部分 */
+
+.diet-case-list li h2 {
+    padding: 10px 0 5px;
+    line-height: 22px;
+    font-size: 18px;
+    text-align: center;
+    height: 24px;
+}
+
+.diet-case-list li h2 a:hover {
+    color: #FF5722;
+}
+
+.fly-case-desc {
+    height: 40px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+}
+
+.fly-case-info {
+    position: relative;
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 1px dotted #eee;
+}
+
+.fly-case-info p {
+    height: 24px;
+    line-height: 24px;
+}
+
+.fly-case-info .layui-elip {
+    color: #666;
+}
+
+.fly-case-info .layui-elip span {
+    float: right;
+}
+
+/* 底部
+ ———————————————————————————————————————————————————————————————————————————— */
+
+.diet-footer {
+     padding: 1.5% 10px 1.5% 10px;
+ }
+
+.diet-footer p {
+    display: block;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
 }
