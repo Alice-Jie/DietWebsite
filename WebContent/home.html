@@ -12,164 +12,165 @@
     </script>
 </head>
 <body class="layui-bg-gray">
-<div class="layui-layout">
-    <!-- 顶部 -->
-    <div class="layui-header header layui-bg-black">
-        <div class="layui-container">
-            <div class='diet-logo diet-nav'>
-                <a href="/">健康饮食</a>
-            </div>
-            <ul class="layui-nav diet-nav">
-                <li class="layui-nav-item layui-this">
-                    <a href="/">首页</a>
+<!-- 顶部 -->
+<div class="layui-header header">
+    <div class="layui-main diet-main">
+        <div class='diet-logo'>
+            <a href="/"></a>
+        </div>
+        <ul class="layui-nav nav-user">
+            <li class="layui-nav-item">
+                <a href="/">登录</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="/">注册</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 横幅 -->
+<div class="layui-banner layui-main">
+    <div class="layui-carousel" id="dietcarousel">
+        <div carousel-item>
+            <div class="layui-bg-red">Test1</div>
+            <div class="layui-bg-orange">Test2</div>
+            <div class="layui-bg-green">Test3</div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('carousel', function () {
+        var carousel = layui.carousel;
+        carousel.render({
+            elem: '#dietcarousel'
+            , width: '100%'    // 设置容器宽度
+            , height: '200px'  // 设置容器高度
+            , arrow: 'always'  // 始终显示箭头
+            //,anim: 'updown'  // 切换动画方式
+        });
+    });
+</script>
+<!-- 主体 -->
+<div class="layui-main">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">菜品动态</li>
+        </ul>
+        <div class="layui-tab-content">
+            <ul class="diet-case-list">
+                <li>
+                    <!-- 图片链接 -->
+                    <a class="diet-case-img" href="/" target="_blank">
+                        <img alt="test1" src="img/404.png">
+                        <i class="layui-icon">&#xe615;</i>
+                    </a>
+                    <!-- 文字标题 -->
+                    <h2 class="layui-elip">
+                        <a href="/" target="_blank">超链接标题</a>
+                    </h2>
+                    <!-- 文字描述 -->
+                    <p class="fly-case-desc">
+                        信息描述部分
+                    </p>
+                    <!-- 发布时间 -->
+                    <div class="fly-case-info">
+                        <p class="layui-elip">
+                            <span style="color:#666;">时间</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <!-- 图片链接 -->
+                    <a class="diet-case-img" href="/" target="_blank">
+                        <img alt="test1" src="img/404.png">
+                        <i class="layui-icon">&#xe615;</i>
+                    </a>
+                    <!-- 文字标题 -->
+                    <h2 class="layui-elip">
+                        <a href="/" target="_blank">超链接标题</a>
+                    </h2>
+                    <!-- 文字描述 -->
+                    <p class="fly-case-desc">
+                        信息描述部分
+                    </p>
+                    <!-- 发布时间 -->
+                    <div class="fly-case-info">
+                        <p class="layui-elip">
+                            <span style="color:#666;">时间</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <!-- 图片链接 -->
+                    <a class="diet-case-img" href="/" target="_blank">
+                        <img alt="test1" src="img/404.png">
+                        <i class="layui-icon">&#xe615;</i>
+                    </a>
+                    <!-- 文字标题 -->
+                    <h2 class="layui-elip">
+                        <a href="/" target="_blank">超链接标题</a>
+                    </h2>
+                    <!-- 文字描述 -->
+                    <p class="fly-case-desc">
+                        信息描述部分
+                    </p>
+                    <!-- 发布时间 -->
+                    <div class="fly-case-info">
+                        <p class="layui-elip">
+                            <span style="color:#666;">时间</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <!-- 图片链接 -->
+                    <a class="diet-case-img" href="/" target="_blank">
+                        <img alt="test1" src="img/404.png">
+                        <i class="layui-icon">&#xe615;</i>
+                    </a>
+                    <!-- 文字标题 -->
+                    <h2 class="layui-elip">
+                        <a href="/" target="_blank">超链接标题</a>
+                    </h2>
+                    <!-- 文字描述 -->
+                    <p class="fly-case-desc">
+                        信息描述部分
+                    </p>
+                    <!-- 发布时间 -->
+                    <div class="fly-case-info">
+                        <p class="layui-elip">
+                            <span style="color:#666;">时间</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <!-- 图片链接 -->
+                    <a class="diet-case-img" href="/" target="_blank">
+                        <img alt="test1" src="img/404.png">
+                        <i class="layui-icon">&#xe615;</i>
+                    </a>
+                    <!-- 文字标题 -->
+                    <h2 class="layui-elip">
+                        <a href="/" target="_blank">超链接标题</a>
+                    </h2>
+                    <!-- 文字描述 -->
+                    <p class="fly-case-desc">
+                        信息描述部分
+                    </p>
+                    <!-- 发布时间 -->
+                    <div class="fly-case-info">
+                        <p class="layui-elip">
+                            <span style="color:#666;">时间</span>
+                        </p>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
-    <!-- 横幅 -->
-    <div class="layui-banner">
-        <div class="layui-carousel" id="dietcarousel">
-            <div carousel-item>
-                <div class="layui-bg-red">Test1</div>
-                <div class="layui-bg-orange">Test2</div>
-                <div class="layui-bg-green">Test3</div>
-            </div>
-        </div>
-    </div>
-    <script>
-        layui.use('carousel', function () {
-            var carousel = layui.carousel;
-            carousel.render({
-                elem: '#dietcarousel'
-                , width: '100%'    // 设置容器宽度
-                , height: '200px'  // 设置容器高度
-                , arrow: 'always'  // 始终显示箭头
-                //,anim: 'updown'  // 切换动画方式
-            });
-        });
-    </script>
-    <!-- 主体 -->
-    <div class="layui-main diet-main">
-        <div class="layui-tab layui-tab-brief">
-            <ul class="layui-tab-title">
-                <li class="layui-this">菜品动态</li>
-            </ul>
-            <div class="layui-tab-content">
-                <ul class="layui-main diet-case-list">
-                    <li>
-                        <!-- 图片链接 -->
-                        <a class="diet-case-img" href="/" target="_blank">
-                            <img alt="test1" src="img/404.png">
-                            <i class="layui-icon">&#xe615;</i>
-                        </a>
-                        <!-- 文字标题 -->
-                        <h2 class="layui-elip">
-                            <a href="/" target="_blank">超链接标题</a>
-                        </h2>
-                        <!-- 文字描述 -->
-                        <p class="fly-case-desc">
-                            信息描述部分
-                        </p>
-                        <!-- 发布时间 -->
-                        <div class="fly-case-info">
-                            <p class="layui-elip">
-                                <span style="color:#666;">时间</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 图片链接 -->
-                        <a class="diet-case-img" href="/" target="_blank">
-                            <img alt="test1" src="img/404.png">
-                            <i class="layui-icon">&#xe615;</i>
-                        </a>
-                        <!-- 文字标题 -->
-                        <h2 class="layui-elip">
-                            <a href="/" target="_blank">超链接标题</a>
-                        </h2>
-                        <!-- 文字描述 -->
-                        <p class="fly-case-desc">
-                            信息描述部分
-                        </p>
-                        <!-- 发布时间 -->
-                        <div class="fly-case-info">
-                            <p class="layui-elip">
-                                <span style="color:#666;">时间</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 图片链接 -->
-                        <a class="diet-case-img" href="/" target="_blank">
-                            <img alt="test1" src="img/404.png">
-                            <i class="layui-icon">&#xe615;</i>
-                        </a>
-                        <!-- 文字标题 -->
-                        <h2 class="layui-elip">
-                            <a href="/" target="_blank">超链接标题</a>
-                        </h2>
-                        <!-- 文字描述 -->
-                        <p class="fly-case-desc">
-                            信息描述部分
-                        </p>
-                        <!-- 发布时间 -->
-                        <div class="fly-case-info">
-                            <p class="layui-elip">
-                                <span style="color:#666;">时间</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 图片链接 -->
-                        <a class="diet-case-img" href="/" target="_blank">
-                            <img alt="test1" src="img/404.png">
-                            <i class="layui-icon">&#xe615;</i>
-                        </a>
-                        <!-- 文字标题 -->
-                        <h2 class="layui-elip">
-                            <a href="/" target="_blank">超链接标题</a>
-                        </h2>
-                        <!-- 文字描述 -->
-                        <p class="fly-case-desc">
-                            信息描述部分
-                        </p>
-                        <!-- 发布时间 -->
-                        <div class="fly-case-info">
-                            <p class="layui-elip">
-                                <span style="color:#666;">时间</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 图片链接 -->
-                        <a class="diet-case-img" href="/" target="_blank">
-                            <img alt="test1" src="img/404.png">
-                            <i class="layui-icon">&#xe615;</i>
-                        </a>
-                        <!-- 文字标题 -->
-                        <h2 class="layui-elip">
-                            <a href="/" target="_blank">超链接标题</a>
-                        </h2>
-                        <!-- 文字描述 -->
-                        <p class="fly-case-desc">
-                            信息描述部分
-                        </p>
-                        <!-- 发布时间 -->
-                        <div class="fly-case-info">
-                            <p class="layui-elip">
-                                <span style="color:#666;">时间</span>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- 底部 -->
-    <div class="layui-footer layui-bg-black">
-        <div class="layui-main diet-footer">
-            <p>Copyright © 2018 dietWebsite.com | Created by 1351300322</p>
-        </div>
+</div>
+<!-- 底部 -->
+<div class="layui-footer footer">
+    <div class="layui-main diet-footer">
+        <p>Copyright © 2018 dietWebsite.com | Created by 1351300322</p>
     </div>
 </div>
 <script>
