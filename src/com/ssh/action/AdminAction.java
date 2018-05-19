@@ -1,7 +1,5 @@
 package com.ssh.action;
 
-import java.sql.Date;
-
 import org.apache.struts2.convention.annotation.Action;
 
 import com.ssh.entity.Admin;
@@ -19,7 +17,6 @@ public class AdminAction extends ActionResult {
 	@Action("admin_editAdmin")
 	public String editStaff() {
 		administrator = (Admin) adminService.getData(1);
-		System.out.println(administrator);
 		return "editAdmin";
 	}
 	

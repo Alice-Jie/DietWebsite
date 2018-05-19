@@ -23,8 +23,32 @@
 </head>
 <body>
 <!-- 顶部 -->
-<div class="layui-header">
+<div class="layui-header header">
     <%@include file="../include/header.jsp" %>
+</div>
+<!-- 横幅 -->
+<div class="layui-banner layui-main">
+    <%@include file="../include/banner.jsp" %>
+</div>
+<!-- 主体 -->
+<div class="layui-main">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">菜品动态</li>
+        </ul>
+        <div class="layui-tab-content">
+            <ul class="diet-case-list">
+	            <%@include file="../include/mainPage.jsp" %>
+	            <%@include file="../include/mainPage.jsp" %>
+	            <%@include file="../include/mainPage.jsp" %>
+	            <%@include file="../include/mainPage.jsp" %>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<div class="layui-footer footer">
+    <%@include file="../include/footer.jsp" %>
 </div>
 <script>
     layui.config({
