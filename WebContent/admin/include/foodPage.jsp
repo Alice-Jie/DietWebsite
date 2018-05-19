@@ -12,13 +12,19 @@
 			<table class="layui-table" lay-filter="foodList">
 			    <thead>
 			        <tr class="success">
-			            <th lay-data="{field:'id', width:'10%', sort:true}">ID</th>
-			            <th lay-data="{field:'image', width:'10%'}">图片</th>
-			            <th lay-data="{field:'name', width:'10%'}">名称</th>
-			            <th lay-data="{field:'price', width:'10%', sort:true}">价格</th>
-                        <th lay-data="{field:'description', width:'40%'}">描述</th>
-                        <th lay-data="{field:'edit', width:'10%'}">编辑</th>
-                        <th lay-data="{field:'delete', width:'10%'}">删除</th>
+			            <th lay-data="{field:'id', width:'6.25%', sort:true}">ID</th>
+			            <th lay-data="{field:'image', width:'6.25%'}">图片</th>
+			            <th lay-data="{field:'name', width:'6.25%'}">名称</th>
+			            <th lay-data="{field:'price', width:'6.25%', sort:true}">价格</th>
+                        <th lay-data="{field:'description', width:'25%'}">描述</th>
+                        <th lay-data="{field:'date', width:'6.25%'}">日期</th>
+                        <th lay-data="{field:'protein', width:'6.25%'}">蛋白质</th>
+                        <th lay-data="{field:'carbohydrate', width:'6.25%'}">糖类</th>
+                        <th lay-data="{field:'fat', width:'6.25%'}">脂肪</th>
+                        <th lay-data="{field:'dietaryFiber', width:'6.25%'}">膳食纤维</th>
+                        <th lay-data="{field:'moisture', width:'6.25%'}">水分</th>
+                        <th lay-data="{field:'edit', width:'6.25%'}">编辑</th>
+                        <th lay-data="{field:'delete', width:'6.25%'}">删除</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -29,6 +35,12 @@
 			            <td>${food.name}</td>
                         <td>${food.price}</td>
                         <td>${food.description}</td>
+                        <td>${food.date.toString()}</td>
+                        <td>${food.protein}</td>
+                        <td>${food.carbohydrate}</td>
+                        <td>${food.fat}</td>
+                        <td>${food.dietaryFiber}</td>
+                        <td>${food.moisture}</td>
                         <td><a href="../admin_editFood?food.id=${food.id}"><i class="layui-icon">&#xe642;</i></a></td>
                         <td><a href="../admin_delFood?food.id=${food.id}"><i class="layui-icon">&#xe640;</i></a></td>
 			        </tr>
@@ -77,6 +89,41 @@
 						<textarea name="food.description" placeholder="请输入菜品内容" class="layui-textarea"></textarea>
 					</div>
 				</div>
+                <!-- 菜品蛋白质 -->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">蛋白质：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="food.protein" required  lay-verify="required" placeholder="请输入菜品蛋白质含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 菜品糖类 -->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">糖 类：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="food.carbohydrate" required  lay-verify="required" placeholder="请输入菜品糖类含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 菜品脂肪 -->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">蛋白质：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="food.fat" required  lay-verify="required" placeholder="请输入菜品脂肪含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 菜品膳食纤维 -->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">膳食纤维：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="food.dietaryFiber" required  lay-verify="required" placeholder="请输入菜品膳食纤维含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 菜品水分 -->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">水分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="food.moisture" required  lay-verify="required" placeholder="请输入菜品水分含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
                 <!-- 提交&重置 -->
 				<div class="layui-form-item">
 					<div class="layui-input-block">

@@ -112,7 +112,7 @@ public class Staff {
 	@Override
 	public String toString() {
 		String console = 
-				"————————————————————————\n"
+				"\n————————————————————————\n"
 				+ "Staff: \n"
 				+ "id: "          + id               + "\n"
 				+ "account: "     + account          + "\n"

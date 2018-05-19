@@ -3,6 +3,7 @@ package com.ssh.action;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.imageio.ImageIO;
 
@@ -18,14 +19,16 @@ import com.ssh.util.ImageUtil;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月12日
- * @version 0.0.2
+ * @date: 2018年5月19日
+ * @version 0.0.3
  * @description：继承ActionResult，专注于处理Controller
  */
 public class FoodAction extends ActionResult {
 	// 添加菜品信息
 	@Action("admin_addFood")
 	public String addFood() {
+		Date date = new Date(new java.util.Date().getTime());
+		food.setDate(date);
 		foodService.addData(food);
 		// 上传图片
 		File imageFolder = new File(ServletActionContext.getServletContext().getRealPath("img/food"));

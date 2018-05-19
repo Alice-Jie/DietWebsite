@@ -58,7 +58,7 @@ public class Admin {
 	@Override
 	public String toString() {
 		String console = 
-				"————————————————————————\n"
+				"\n————————————————————————\n"
 				+ "Admin: \n"
 				+ "id: "          + id          + "\n"
 				+ "account: "     + account     + "\n"

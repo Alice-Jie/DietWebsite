@@ -7,6 +7,10 @@ CREATE TABLE `Member` (
     `MemberEmail`  varchar(50) NULL ,
     `MemberPhone`  varchar(450) NULL ,
     `MemberDate`  datetime(6) NULL ,
-    `MemberVit`  bigint NULL ,
+    `MemberProtein`  bigint(4) NOT NULL ,
+    `MemberCarbohydrate`  bigint(4) NOT NULL ,
+    `MemberFat`  bigint(4) NOT NULL ,
+    `MemberDietaryFiber`  bigint(4) NOT NULL ,
+    `MemberMoisture`  bigint(4) NOT NULL ,
     PRIMARY KEY (`MemberID`)
 );

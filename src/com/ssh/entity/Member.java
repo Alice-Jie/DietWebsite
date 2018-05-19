@@ -13,8 +13,8 @@ import javax.persistence.Table;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月15日
- * @version 0.0.1
+ * @date: 2018年5月19日
+ * @version 0.0.3
  * @description：在Hibernate层建立映射关系
  */
 @Entity
@@ -23,21 +23,32 @@ public class Member {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MemberID")
-	private int id;         // 会员ID
+	private int id;            // 会员ID
 	@Column(name = "MemberAccount")
-	private String account; // 会员账号
+	private String account;    // 会员账号
 	@Column(name = "MemberPwd")
-	private String pwd;     // 会员密码
+	private String pwd;        // 会员密码
 	@Column(name = "MemberName")
-	private String name;    // 会员姓名
+	private String name;       // 会员姓名
 	@Column(name = "MemberSex")
-	private String sex;     // 会员性别
+	private String sex;        // 会员性别
 	@Column(name = "MemberEmail")
-	private String email;   // 会员电子邮箱
+	private String email;      // 会员电子邮箱
 	@Column(name = "MemberPhone")
-	private String phone;   // 会员电话
+	private String phone;      // 会员电话
 	@Column(name = "MemberDate")
-	private Date date;    // 注册日期
+	private Date date;         // 注册日期
+	@Column(name = "MemberProtein")
+	private int protein;       // 蛋白质
+	@Column(name = "MemberCarbohydrate")
+	private int carbohydrate;  // 糖类
+	@Column(name = "MemberFat")
+	private int fat;           // 脂肪
+	@Column(name = "MemberDietaryFiber")
+	private int dietaryFiber;  // 膳食纤维
+	@Column(name = "MemberMoisture")
+	private int moisture;      // 水分
+	
 	
 	/* setter、getter */
 	
@@ -105,6 +116,46 @@ public class Member {
 		this.date = date;
 	}
 	
+	public int getProtein() {
+		return protein;
+	}
+
+	public void setProtein(int protein) {
+		this.protein = protein;
+	}
+
+	public int getCarbohydrate() {
+		return carbohydrate;
+	}
+
+	public void setCarbohydrate(int carbohydrate) {
+		this.carbohydrate = carbohydrate;
+	}
+
+	public int getFat() {
+		return fat;
+	}
+
+	public void setFat(int fat) {
+		this.fat = fat;
+	}
+
+	public int getDietaryFiber() {
+		return dietaryFiber;
+	}
+
+	public void setDietaryFiber(int dietaryFiber) {
+		this.dietaryFiber = dietaryFiber;
+	}
+
+	public int getMoisture() {
+		return moisture;
+	}
+
+	public void setMoisture(int moisture) {
+		this.moisture = moisture;
+	}
+
 	/**
 	 * 打印属性
 	 * @return 属性列表
@@ -112,7 +163,7 @@ public class Member {
 	@Override
 	public String toString() {
 		String console = 
-				"————————————————————————\n"
+				"\n————————————————————————\n"
 				+ "Member: \n"
 				+ "id: "          + id               + "\n"
 				+ "account: "     + account          + "\n"
@@ -122,6 +173,11 @@ public class Member {
 				+ "Email: "       + email            + "\n"
 				+ "phone: "       + phone            + "\n"
 				+ "date: "        + date.toString()  + "\n"
+				+ "protein:"      + protein          + "\n"
+				+ "carbohydrate:" + carbohydrate     + "\n"
+				+ "fat:"          + fat              + "\n"
+				+ "dietaryFiber:" + dietaryFiber     + "\n"
+				+ "moisture:"     + moisture         + "\n"
 				+ "————————————————————————\n"
 				;
 		return console;
