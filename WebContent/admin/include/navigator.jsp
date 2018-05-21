@@ -6,6 +6,11 @@
 <div class="navBar layui-side-scroll" id="navBarId">
     <ul class="layui-nav layui-nav-tree layui-left-nav">
         <li class="layui-nav-item layui-nav-itemed">
+            <a href="../admin/debug.jsp">
+                <i class="layui-icon">&#xe63c;</i><cite> 更新日志</cite>
+            </a>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;">
                 <i class="layui-icon">&#xe620;</i><cite> 信息管理</cite>
                 <span class="layui-nav-more"></span>

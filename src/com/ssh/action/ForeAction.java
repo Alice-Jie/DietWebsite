@@ -26,7 +26,6 @@ public class ForeAction extends ActionResult {
 	// 查看菜品信息
 	@Action("fore_foodDetail")
 	public String foodDetail() {
-		// 实体类名报错
 		int id = food.getId();
 		food = (Food) foodService.getData(id);
 		return "foodDetail";

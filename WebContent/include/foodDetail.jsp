@@ -4,7 +4,7 @@
 <!-- 菜品详细信息 -->
 <div class="detail-info">
     <div class="info-title">
-        <h1>{food.name}</h1>
+        <h1>${food.name}</h1>
     </div>
     <div class="layui-clear info-main">
         <!-- 菜品图片 -->
@@ -14,16 +14,16 @@
         <div class="info-main-right">
             <!-- 菜品价格 -->
             <div class="info-price">
-                <em class="page-left">￥{food.price}<span> 元</span></em>
+                <em class="page-left">￥${food.price}<span> 元</span></em>
             </div>
             <!-- 营养参考 -->
             <div class="layui-clear nutrition">
-                <span class="desc">蛋白质：</span><span class="num">{food.protein}</span>
-                <span class="desc">糖类：</span><span class="num">{food.carbohydrate}</span>
+                <span class="desc">蛋白质：</span><span class="num">${food.protein}</span>
+                <span class="desc">糖类：</span><span class="num">${food.carbohydrate}</span>
                 <span class="desc">脂肪：</span><span class="num">${food.fat}</span>
                 <span class="desc">膳食纤维：</span><span class="num">${food.dietaryFiber}</span>
                 <span class="desc">水分：</span><span class="num">${food.moisture}</span>
-                <span class="desc">发布时间：</span><span class="num">${food.id}</span>
+                <span class="desc">发布时间：</span><span class="num">${food.date.toString()}</span>
             </div>
         </div>
     </div>

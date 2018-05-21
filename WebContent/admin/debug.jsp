@@ -33,7 +33,7 @@
     </div>
     <!-- 主体内容 -->
     <div class="layui-body layui-form">
-        <%@include file="../admin/include/memberForm.jsp" %>
+        <%@include file="../admin/include/timeLine.jsp" %>
     </div>
     <!-- 底部 -->
     <div class="layui-footer footer layui-bg-black">

@@ -13,21 +13,21 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">账号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="member.account" value="${member.account}" required  lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                        <input type="text" name="member.account" value="${member.account}" required  lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <!-- 会员密码 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="member.pwd" value="${member.pwd}" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        <input type="text" name="member.pwd" value="${member.pwd}" required  lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <!-- 会员姓名 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">姓名：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="member.name" value="${member.name}" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                        <input type="text" name="member.name" value="${member.name}" required  lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <!-- 会员性别 -->
@@ -43,14 +43,14 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">电子邮箱：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="member.Email" value="${member.email}" required  lay-verify="required|email" placeholder="请输入邮箱地址" autocomplete="off" class="layui-input">
+                        <input type="text" name="member.Email" value="${member.email}" required  lay-verify="required|email" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <!-- 会员手机 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">手机号码：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="member.phone" value="${member.phone}" required  lay-verify="required|phone" placeholder="请输入手机号码" autocomplete="off" class="layui-input">
+                        <input type="text" name="member.phone" value="${member.phone}" required  lay-verify="required|phone" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <!-- 注册时间-->

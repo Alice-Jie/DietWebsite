@@ -22,7 +22,7 @@
     });
     </script>
 </head>
-<body>
+<body class="layui-bg-gray">
 <!-- 顶部 -->
 <div class="layui-header header">
     <%@include file="../include/header.jsp" %>

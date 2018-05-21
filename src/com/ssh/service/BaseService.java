@@ -4,11 +4,17 @@ import java.util.List;
 
 /**TODO
  * @author：Alice
- * @date: 2018年5月12日
- * @version 0.0.1
+ * @date: 2018年5月21日
+ * @version 0.0.2
  * @description：在业务层提供访问DAO层Service接口
  */
 public interface BaseService {
+	
+	/** 设置实体类 */
+	public void setClass();
+	
+	/** 设置实体类 */
+	public void setClass(String cl);
 	
 	/** 添加数据 */
 	public void addData(Object obj);
@@ -18,6 +24,9 @@ public interface BaseService {
 	
 	/** 获取数据 */
 	public Object getData(Class cl, int id);
+	
+	/** 获取数据 */
+	public Object getData(String cl, int id);
 	
 	/** 获取数据 */
 	public Object getData(int id);

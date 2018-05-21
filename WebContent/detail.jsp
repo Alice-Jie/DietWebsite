@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="layui/css/layui.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/detail.css">
     <script src="layui/layui.js"></script>
     <script>
     // 主动加载jquery模块
@@ -22,7 +22,7 @@
     });
     </script>
 </head>
-<body>
+<body  class="layui-bg-gray">
 <!-- 顶部 -->
 <div class="layui-header header">
     <%@include file="../include/header.jsp" %>

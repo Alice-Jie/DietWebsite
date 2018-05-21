@@ -12,5 +12,7 @@ import com.ssh.service.ForeService;
  */
 @Service
 public class ForeServiceImpl extends BaseServiceImpl implements ForeService {
-
+	public ForeServiceImpl() {
+		// setClass();
+	}
 }

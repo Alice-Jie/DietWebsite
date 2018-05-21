@@ -7,5 +7,5 @@ package com.ssh.service;
  * @description：继承BaseService接口
  */
 public interface AdminService extends BaseService {
-
+	
 }
