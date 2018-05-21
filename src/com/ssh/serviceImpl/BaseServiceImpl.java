@@ -38,10 +38,10 @@ public class BaseServiceImpl implements BaseService {
 				String entityPackageName = serviceImplClass.getPackage().getName().replaceAll(".serviceImpl",
 						".entity");
 				String entityFullName = entityPackageName + "." + entitySimpleName;
-				// System.out.println("serviceImpleClassSimpleName:" + serviceImpleClassSimpleName);
-				// System.out.println("entitySimpleName:" + entitySimpleName);
-				// System.out.println("entityPackageName:" + entityPackageName);
-				// System.out.println("entityFullName:" + entityFullName);
+				System.out.println("serviceImpleClassSimpleName:" + serviceImpleClassSimpleName);
+				System.out.println("entitySimpleName:" + entitySimpleName);
+				System.out.println("entityPackageName:" + entityPackageName);
+				System.out.println("entityFullName:" + entityFullName);
 				cl = Class.forName(entityFullName);
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

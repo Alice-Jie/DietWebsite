@@ -14,7 +14,7 @@
         carousel.render({
             elem: '#dietcarousel'
             , width: '100%'    // 设置容器宽度
-            , height: '550px'  // 设置容器高度
+            , height: '320px'  // 设置容器高度
             , arrow: 'always'  // 始终显示箭头
             //,anim: 'updown'  // 切换动画方式
         });

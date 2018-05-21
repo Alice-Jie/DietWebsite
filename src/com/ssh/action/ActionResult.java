@@ -14,6 +14,10 @@ import org.apache.struts2.convention.annotation.Results;
 @Namespace("/")
 @ParentPackage("mypack")
 @Results({
+	/* 前台信息路由 */
+	@Result(name = "home", location = "/home.jsp"),
+	@Result(name = "foodDetail", location = "/detail.jsp"),
+	
 	
 	/* 会员信息路由 */
 	@Result(name = "memberList", location = "/admin/memberList.jsp"),

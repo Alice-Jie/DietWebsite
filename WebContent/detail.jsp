@@ -27,24 +27,9 @@
 <div class="layui-header header">
     <%@include file="../include/header.jsp" %>
 </div>
-<!-- 横幅 -->
-<div class="layui-banner layui-main diet-banner">
-    <%@include file="../include/banner.jsp" %>
-</div>
 <!-- 主体 -->
-<div class="layui-main">
-    <div class="layui-tab layui-tab-brief">
-        <ul class="layui-tab-title">
-            <li class="layui-this">菜品动态</li>
-        </ul>
-        <div class="layui-tab-content">
-            <ul class="diet-case-list">
-                <c:forEach items="${foods}" var="food">
-	               <%@include file="../include/foodTab.jsp" %>
-	            </c:forEach>
-            </ul>
-        </div>
-    </div>
+<div class="layui-main detail-main">
+    <%@include file="../include/foodDetail.jsp" %>
 </div>
 <!-- 底部 -->
 <div class="layui-footer footer">

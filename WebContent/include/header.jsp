@@ -3,7 +3,7 @@
 
 <div class="layui-main diet-main">
     <div class='diet-logo'>
-        <a href="/"></a>
+        <a href="fore_home"></a>
     </div>
     <ul class="layui-nav nav-user">
         <li class="layui-nav-item">

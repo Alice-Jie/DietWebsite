@@ -1,0 +1,113 @@
+.detail-main {
+    margin: 15px auto 15px auto;
+    min-height: 820px
+}
+
+.detail-info {
+    padding: 15px;
+    min-height: 750px;
+    background-color: #fff;
+}
+
+/* 标题
+ ———————————————————————————————————————————————————————————————————————————— */
+
+.info-title {
+    border-left: 5px solid #009688;
+    padding: 0 0 0 10px;
+}
+
+.info-title h1 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.info-title p, .info-title p i {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666;
+}
+
+.info-title p i {
+    vertical-align: top;
+}
+
+/* 主体
+ ———————————————————————————————————————————————————————————————————————————— */
+
+.info-main {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 5px
+}
+
+.info-main-left {
+    float: left;
+    width: 260px;
+    height: 260px;
+}
+
+.info-main-left img {
+    width: 250px;
+    height: 250px;
+    padding: 4px;
+    border: 1px solid #e4ecf3;
+}
+
+.info-main-right {
+    float: left;
+    width: 840px;
+    padding-left: 10px;
+}
+
+.info-main-right .info-price {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background: #F0F0F0;
+    color: #FF5722;
+}
+
+.info-main-right .info-price em {
+    padding-right: 10px;
+    font-size: 28px;
+}
+
+.info-main-right .info-price span {
+    font-size: 0.5em;
+    line-height: 0.6em;
+}
+
+.info-main-right .nutrition {
+    font-size: 12px;
+    color: #8f98aa;
+    margin-top: 20px;
+}
+
+.info-main-right .nutrition .desc {
+    float: left;
+    width: 7.5%;
+    line-height: 64px;
+}
+
+.info-main-right .nutrition .num {
+    float: left;
+    width: 42.5%;
+    line-height: 64px;
+}
+
+/* 描述
+ ———————————————————————————————————————————————————————————————————————————— */
+
+.detail-desc {
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.desc-main {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 5px
+}

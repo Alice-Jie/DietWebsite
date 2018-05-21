@@ -3,20 +3,20 @@
 
 <li>
     <!-- 图片链接 -->
-    <a class="diet-case-img" href="/" target="_blank">
-        <img alt="test1" src="img/404.png">
+    <a class="diet-case-img" href="fore_foodDetail?food.id=${food.id}" target="_blank">
+        <img alt="${food.name}" src="img/food/food_${food.id}.jpg">
         <i class="layui-icon">&#xe615;</i>
     </a>
     <!-- 文字标题 -->
     <h2 class="layui-elip">
-        <a href="/" target="_blank">超链接标题</a>
+        <a href="fore_foodDetail?food.id=${food.id}" target="_blank">${food.name}</a>
     </h2>
     <!-- 文字描述 -->
-    <p class="fly-case-desc">信息描述部分</p>
+    <p class="fly-case-desc">${food.description}</p>
     <!-- 发布时间 -->
     <div class="fly-case-info">
         <p class="layui-elip">
-            <span style="color:#666;">时间</span>
+            <span style="color:#666;">${food.date.toString()}</span>
         </p>
     </div>
 </li>
