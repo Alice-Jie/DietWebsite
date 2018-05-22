@@ -12,6 +12,7 @@ import com.ssh.service.FoodService;
  */
 @Service
 public class FoodServiceImpl extends BaseServiceImpl implements FoodService {
+	
 	public FoodServiceImpl() {
 		// 设置实体类
 		setClass();

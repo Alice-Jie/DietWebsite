@@ -34,6 +34,9 @@ public interface BaseService {
 	/** 获取数据列表 */
 	public List getDataList();
 	
+	/** 获取数据列表 */
+	public List getDataList(Object... pairParms);
+	
 	/** 更新数据 */
 	public void updateData(Object obj);
 

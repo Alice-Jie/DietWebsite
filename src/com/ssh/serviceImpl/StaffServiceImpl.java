@@ -12,8 +12,10 @@ import com.ssh.service.StaffService;
  */
 @Service
 public class StaffServiceImpl extends BaseServiceImpl implements StaffService {
+	
 	public StaffServiceImpl() {
 		// 设置实体类
 		setClass();
 	}
+	
 }

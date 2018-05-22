@@ -2,19 +2,23 @@ package com.ssh.serviceImpl;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ssh.daoImpl.DAOImpl;
-import com.ssh.entity.Food;
 import com.ssh.service.BaseService;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
-/**TODO
+/**
+ * TODO
+ * 
  * @author：Alice
- * @date: 2018年5月21日
- * @version 0.0.2
+ * @date: 2018年5月22日
+ * @version 0.0.3
  * @description：实现业务层BaseService接口
  */
 @Service
@@ -28,7 +32,7 @@ public class BaseServiceImpl implements BaseService {
 	public BaseServiceImpl() {
 		// setClass();
 	}
-	
+
 	/** 设置实体类 */
 	@Override
 	public void setClass() {
@@ -44,7 +48,8 @@ public class BaseServiceImpl implements BaseService {
 				String entityPackageName = serviceImplClass.getPackage().getName().replaceAll(".serviceImpl",
 						".entity");
 				String entityFullName = entityPackageName + "." + entitySimpleName;
-				// System.out.println("serviceImpleClassSimpleName:" + serviceImpleClassSimpleName);
+				// System.out.println("serviceImpleClassSimpleName:" +
+				// serviceImpleClassSimpleName);
 				// System.out.println("entitySimpleName:" + entitySimpleName);
 				// System.out.println("entityPackageName:" + entityPackageName);
 				// System.out.println("entityFullName:" + entityFullName);
@@ -54,9 +59,10 @@ public class BaseServiceImpl implements BaseService {
 			}
 		}
 	}
-	
-	/** 
+
+	/**
 	 * 设置实体类
+	 * 
 	 * @param cl 实体类名
 	 */
 	@Override
@@ -68,16 +74,13 @@ public class BaseServiceImpl implements BaseService {
 			e.printStackTrace();
 		}
 	}
-	
-/*
-	public void showClassName() {
-		System.out.println(cl);
-	}
-	
-	public static void main(String[] args) {
-		// new MemberServiceImpl().showClassName();
-	}
-*/
+
+	/*
+	 * public void showClassName() { System.out.println(cl); }
+	 * 
+	 * public static void main(String[] args) { // new
+	 * MemberServiceImpl().showClassName(); }
+	 */
 
 	/** 添加数据 */
 	@Override
@@ -93,6 +96,7 @@ public class BaseServiceImpl implements BaseService {
 
 	/**
 	 * 获取数据
+	 * 
 	 * @param cl 实体类
 	 * @param id 实体类对应ID
 	 */
@@ -103,6 +107,7 @@ public class BaseServiceImpl implements BaseService {
 
 	/**
 	 * 获取数据
+	 * 
 	 * @param cl 实体类名
 	 * @param id 实体类对应ID
 	 */
@@ -110,9 +115,10 @@ public class BaseServiceImpl implements BaseService {
 	public Object getData(String cl, int id) {
 		return dao.get(cl, id);
 	}
-	
+
 	/**
 	 * 获取数据
+	 * 
 	 * @param id 实体类对应ID
 	 */
 	@Override
@@ -120,10 +126,41 @@ public class BaseServiceImpl implements BaseService {
 		return dao.get(cl, id);
 	}
 
-	/** 获取数据列表 */
+	/** 
+	 * 获取数据列表
+	 * 
+	 * @return 数组对象
+	 */
 	@Override
 	public List<Object> getDataList() {
 		DetachedCriteria query = DetachedCriteria.forClass(cl);
+		query.addOrder(Order.desc("id")); // 根据ID排序
+		return dao.findByCriteria(query);
+	}
+	
+	/** 
+	 * 获取数据列表
+	 * 
+	 * @param pairParms 参数列表{key, value, ... ,key, value}
+	 * @return 数组对象
+	 */
+	@Override
+	public List getDataList(Object... pairParms) {
+		HashMap<String, Object> map = new HashMap<>();
+		// 按照key,value,key,value,key,value取值放入放进Map
+		for (int i = 0; i < pairParms.length; i = i + 2) {
+			map.put(pairParms[i].toString(), pairParms[i + 1]);
+		}
+		DetachedCriteria query = DetachedCriteria.forClass(cl);
+		// 使用QBC实现动态查询 
+		Set<String> ks = map.keySet();
+		for (String key : ks) {
+			if (null == map.get(key)) {
+				query.add(Restrictions.isNull(key));
+			} else {
+				query.add(Restrictions.eq(key, map.get(key)));
+			}
+		}
 		query.addOrder(Order.desc("id")); // 根据ID排序
 		return dao.findByCriteria(query);
 	}

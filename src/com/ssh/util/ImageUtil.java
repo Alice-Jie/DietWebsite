@@ -26,10 +26,15 @@ public class ImageUtil {
 
 	public static BufferedImage change2jpg(File f) {
 		try {
+			// 在内存中创建的Image对象
 			java.awt.Image i = Toolkit.getDefaultToolkit().createImage(f.getAbsolutePath());
+			// 创建PixelGrabber对象
 			PixelGrabber pg = new PixelGrabber(i, 0, 0, -1, -1, true);
-			pg.grabPixels();
-			int width = pg.getWidth(), height = pg.getHeight();
+			pg.grabPixels();  // 生成图像像素数组
+			// 获取图像宽和高
+			int width = pg.getWidth();
+			int height = pg.getHeight();
+			// 生成bufferedImage对象
 			final int[] RGB_MASKS = { 0xFF0000, 0xFF00, 0xFF };
 			final ColorModel RGB_OPAQUE = new DirectColorModel(32, RGB_MASKS[0], RGB_MASKS[1], RGB_MASKS[2]);
 			DataBuffer buffer = new DataBufferInt((int[]) pg.getPixels(), pg.getWidth() * pg.getHeight());
@@ -37,7 +42,6 @@ public class ImageUtil {
 			BufferedImage img = new BufferedImage(RGB_OPAQUE, raster, false, null);
 			return img;
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
@@ -49,21 +53,17 @@ public class ImageUtil {
 			i = resizeImage(i, width, height);
 			ImageIO.write((RenderedImage) i, "jpg", destFile);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	public static Image resizeImage(Image srcImage, int width, int height) {
 		try {
-
 			BufferedImage buffImg = null;
 			buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 			buffImg.getGraphics().drawImage(srcImage.getScaledInstance(width, height, Image.SCALE_SMOOTH), 0, 0, null);
-
 			return buffImg;
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

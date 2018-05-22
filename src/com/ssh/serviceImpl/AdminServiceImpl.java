@@ -13,6 +13,7 @@ import com.ssh.service.AdminService;
  */
 @Service
 public class AdminServiceImpl extends BaseServiceImpl implements AdminService {
+	
 	public AdminServiceImpl() {
 		// 设置实体类
 		setClass();

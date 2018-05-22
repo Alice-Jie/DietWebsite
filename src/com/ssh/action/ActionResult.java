@@ -9,7 +9,7 @@ import org.apache.struts2.convention.annotation.Results;
  * @author：Alice
  * @date: 2018年5月15日
  * @version 0.0.4
- * @description：继承ActionService，专注于处理JSP返回页面以及路径映射
+ * @description：继承ActionParameter，专注于处理JSP返回页面以及路径映射
  */
 @Namespace("/")
 @ParentPackage("mypack")
@@ -39,6 +39,6 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "editAdmin", location = "/admin/editAdmin.jsp"),
 	
 })
-public class ActionResult extends ActionService {
+public class ActionResult extends ActionParameter {
 
 }
