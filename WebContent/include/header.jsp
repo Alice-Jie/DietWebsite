@@ -7,10 +7,10 @@
     </div>
     <ul class="layui-nav nav-user">
         <li class="layui-nav-item">
-            <a href="/">登录</a>
+            <a href="login.jsp">登录</a>
         </li>
         <li class="layui-nav-item">
-            <a href="/">注册</a>
+            <a href="register.jsp">注册</a>
         </li>
     </ul>
 </div>
