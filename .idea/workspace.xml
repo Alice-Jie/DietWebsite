@@ -4,32 +4,10 @@
     <list default="true" id="b18f0f79-a75d-4af0-a932-2f66cb246d39" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/action/ActionResult.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/action/ActionResult.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/action/ForeAction.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/action/ForeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/service/BaseService.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/service/BaseService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/service/MemberService.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/service/MemberService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/AdminServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/AdminServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/BaseServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/FoodServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/FoodServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/ForeServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/ForeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/MemberServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/MemberServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/StaffServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/serviceImpl/StaffServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ssh/util/ImageUtil.class" afterPath="$PROJECT_DIR$/build/classes/com/ssh/util/ImageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/include/loginPage.jsp" afterPath="$PROJECT_DIR$/WebContent/include/loginPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/include/header.jsp" afterPath="$PROJECT_DIR$/WebContent/include/header.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/index.jsp" afterPath="$PROJECT_DIR$/WebContent/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/index.js" afterPath="$PROJECT_DIR$/WebContent/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/login.html" afterPath="$PROJECT_DIR$/WebContent/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/login.jsp" afterPath="$PROJECT_DIR$/WebContent/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/action/ActionResult.java" afterPath="$PROJECT_DIR$/src/com/ssh/action/ActionResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/action/ForeAction.java" afterPath="$PROJECT_DIR$/src/com/ssh/action/ForeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/service/BaseService.java" afterPath="$PROJECT_DIR$/src/com/ssh/service/BaseService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/service/MemberService.java" afterPath="$PROJECT_DIR$/src/com/ssh/service/MemberService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/AdminServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/BaseServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/FoodServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/FoodServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/ForeServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/ForeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/MemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/serviceImpl/StaffServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/ssh/serviceImpl/StaffServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ssh/util/ImageUtil.java" afterPath="$PROJECT_DIR$/src/com/ssh/util/ImageUtil.java" />
     </list>
     <ignored path="DietWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,9 +51,11 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37866354">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <folding>
+                <marker date="1527082209961" expanded="true" signature="322:330" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -336,7 +316,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1936" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -374,6 +354,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WebContent/css/detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -651,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37866354">
           <caret line="17" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3985932">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,9 +702,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37866354">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <marker date="1527082209961" expanded="true" signature="322:330" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

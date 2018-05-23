@@ -45,8 +45,7 @@ public class ForeAction extends ActionResult {
 	        return "login";
 	    }
 	    ActionContext.getContext().getSession().put("member", member_session);
-	    // return "homePage";  // 尚未添加路由
-	    return "home";
+	    return "homePage";
 	}
 	
 	// 注册
@@ -61,7 +60,16 @@ public class ForeAction extends ActionResult {
              return "register"; 
          }
          member.setAccount(account);
+ 		 Date date = new Date(new java.util.Date().getTime());
+ 		 member.setDate(date);
          memberService.addData(member);
-         return "home";
+         return "homePage";
+	}
+	
+	// 退出
+	@Action("fore_Logout")
+	public String logout() {
+	    ActionContext.getContext().getSession().remove("member");
+	    return "homePage"; 
 	}
 }

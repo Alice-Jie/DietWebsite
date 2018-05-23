@@ -3,6 +3,6 @@ layui.define(['layer', 'form', 'element'], function (exports) {
         , form    = layui.form
         , element = layui.element
         ;
-
+    
     exports('index', {});
 });

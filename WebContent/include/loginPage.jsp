@@ -7,7 +7,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">账号：</label>
             <div class="layui-input-block">
-                <input type="text" id="loginAccount" name="member.account" class="layui-input" required lay-verify="required" placeholder="请输入账号" autocomplete="off">
+                <input type="text" id="loginAccount" name="member.account" class="layui-input" required lay-verify="required" placeholder="请输入账号名" autocomplete="off">
             </div>
         </div>
         <div class="layui-form-item">

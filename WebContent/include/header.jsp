@@ -6,11 +6,21 @@
         <a href="fore_home"></a>
     </div>
     <ul class="layui-nav nav-user">
-        <li class="layui-nav-item">
-            <a href="login.jsp">登录</a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="register.jsp">注册</a>
-        </li>
+        <c:if test="${!empty member}">
+            <li class="layui-nav-item">
+                <a href="home">${member.name}</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="fore_Logout">退出</a>
+            </li>   
+        </c:if>
+        <c:if test="${empty member}">
+	        <li class="layui-nav-item">
+	            <a href="login.jsp">登录</a>
+	        </li>
+	        <li class="layui-nav-item">
+	            <a href="register.jsp">注册</a>
+	        </li>    
+        </c:if>
     </ul>
 </div>
