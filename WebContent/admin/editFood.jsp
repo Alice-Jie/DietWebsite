@@ -13,13 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="../layui/css/layui.css">
     <link rel="stylesheet" href="../css/admin.css">
-    <script src="../layui/layui.js"></script>
-    <script>
-    // 主动加载jquery模块
-    layui.use(['jquery'], function(){ 
-      var $ = layui.$;  // 调用layui内部jquery
-    });
-    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="layui/layui.js"></script>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">

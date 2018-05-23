@@ -40,14 +40,28 @@ public class ForeAction extends ActionResult {
 		String account = HtmlUtils.htmlEscape(member.getAccount());
 	    member.setAccount(account);
 	    Member member_session = memberService.matchAccount(member.getAccount(), member.getPwd());
-	    System.out.println(member_session);
 	    if(null == member_session) {
 	        msg= "账号或密码错误！";
-	        return "login.jsp";
+	        return "login";
 	    }
 	    ActionContext.getContext().getSession().put("member", member_session);
 	    // return "homePage";  // 尚未添加路由
 	    return "home";
 	}
 	
+	// 注册
+	@Action("fore_register")
+	public String foreRegister() {
+		// 通过HtmlUtils.htmlEscape进行转义
+		String account = HtmlUtils.htmlEscape(member.getAccount());
+	    // 判断账户是否存在
+	    boolean isExist = memberService.isAccount(account);
+         if(isExist) {
+             msg = "用户名已经被使用,不能使用";
+             return "register"; 
+         }
+         member.setAccount(account);
+         memberService.addData(member);
+         return "home";
+	}
 }

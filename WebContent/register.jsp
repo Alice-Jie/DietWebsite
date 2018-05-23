@@ -14,13 +14,8 @@
     <link rel="stylesheet" href="layui/css/layui.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="layui/layui.js"></script>
-    <script>
-    // 主动加载jquery模块
-    layui.use(['jquery'], function(){ 
-      var $ = layui.$;  // 调用layui内部jquery
-    });
-    </script>
 </head>
 <body  class="layui-bg-gray">
 <!-- 顶部 -->
@@ -57,6 +52,24 @@
     layui.config({
         base: 'js/' // 模块的目录
     }).use('index');   // 加载入口
+</script>
+<script>
+$(function(){
+    <c:if test="${!empty msg}">
+	    layui.use('layer', function(){
+	    	var layer = layui.layer;
+	    	layer.msg('${msg}');
+	    });
+    </c:if>
+    /** 注册验证 */
+    $("#register").submit(function() {
+        if($("#registerPassword").val() != $("#registerRePassword").val()) {
+            layer.msg('密码不一致！');
+            return false;
+        }
+        return true;
+    });
+})
 </script>
 </body>
 </html>

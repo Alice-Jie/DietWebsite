@@ -17,7 +17,8 @@ import org.apache.struts2.convention.annotation.Results;
 	/* 前台信息路由 */
 	@Result(name = "home", location = "/home.jsp"),
 	@Result(name = "foodDetail", location = "/detail.jsp"),
-	
+	@Result(name = "login", location = "/login.jsp"),
+	@Result(name = "register", location = "/register.jsp"),
 	
 	/* 会员信息路由 */
 	@Result(name = "memberList", location = "/admin/memberList.jsp"),

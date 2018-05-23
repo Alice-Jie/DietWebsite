@@ -1,3 +1,3 @@
 <%
-	response.sendRedirect("fore_home");
+    response.sendRedirect("fore_home");
 %>
