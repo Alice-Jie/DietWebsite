@@ -25,7 +25,7 @@
 <!-- 主体 -->
 <div class="layui-main member-main">
     <!-- 左侧导航栏 -->
-    <%@include file="../include/memberPwd.jsp" %>
+    <%@include file="../include/staffLeftNav.jsp" %>
 	<!-- 右侧显示内容 -->
 	<div class="member-panel">
 	    <div class="layui-tab layui-tab-brief">
@@ -36,11 +36,11 @@
 	        <div class="layui-tab-content">
 	            <!-- 个人资料 -->
 	            <div class="layui-tab-item layui-show">
-	                <%@include file="../include/memberDetail.jsp" %>
+	                <%@include file="../include/staffDetail.jsp" %>
 	            </div>
 	            <!-- 修改密码 -->
 	            <div class="layui-tab-item">
-	                <%@include file="../include/memberPwd.jsp" %>
+	                <%@include file="../include/staffPwd.jsp" %>
 	            </div>
 	        </div>
 	    </div>

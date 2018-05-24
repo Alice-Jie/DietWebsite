@@ -1,19 +1,28 @@
 package com.ssh.action;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.sql.Date;
 
+import javax.imageio.ImageIO;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.springframework.web.util.HtmlUtils;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.ssh.entity.*;
 
+import com.ssh.util.ImageUtil;
+
 /**
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月24日
- * @version 0.0.4
+ * @date: 2018年5月25日
+ * @version 0.0.5
  * @description：继承ActionResult，专注于处理Controller
  */
 public class ForeAction extends ActionResult {
@@ -78,14 +87,10 @@ public class ForeAction extends ActionResult {
 	// 员工登录
 	@Action("fore_staffLogin")
 	public String foreStffLogin() {
-		System.out.println("fore_staffLogin");
 		// 通过HtmlUtils.htmlEscape进行转义
 		String account = HtmlUtils.htmlEscape(staff.getAccount());
 	    staff.setAccount(account);
 	    Staff staff_session = staffService.matchAccount(staff.getAccount(), staff.getPwd());
-	    System.out.println(staff.getPwd());
-	    System.out.println(staff.getAccount());
-	    System.out.println(staff_session);
 	    if(null == staff_session) {
 	        msg= "员工账号或密码错误！";
 	        return "staffLogin";
@@ -121,11 +126,12 @@ public class ForeAction extends ActionResult {
 	// 更新会员信息
 	@Action("fore_updateMemberInfo")
 	public String updateMemberInfo() {
+		msg = "";
 		int id = member.getId();
 		Member tempMember = (Member) memberService.getData(id);
 		tempMember.setSex(member.getSex());
 		tempMember.setEmail(member.getEmail());
-		tempMember.setPhone(member.getPhone());;
+		tempMember.setPhone(member.getPhone());
 		memberService.updateData(tempMember);
 		msg = "修改信息成功！";
 		return "memberInfo";
@@ -134,11 +140,61 @@ public class ForeAction extends ActionResult {
 	// 更新会员信息
 	@Action("fore_updateMemberPwd")
 	public String updateMemberPwd() {
+		msg = "";
 		int id = member.getId();
 		Member tempMember = (Member) memberService.getData(id);
-		tempMember.setPwd(member.getPwd());;
+		tempMember.setPwd(member.getPwd());
 		memberService.updateData(tempMember);
 		msg = "修改密码成功！";
 		return "memberInfo";
 	}
+	
+	// 更新员工信息
+	@Action("fore_updateStaffInfo")
+	public String updateStaffInfo() {
+		msg = "";
+		int id = staff.getId();
+		Staff tempStaff = (Staff) staffService.getData(id);
+		tempStaff.setSex(staff.getSex());
+		tempStaff.setEmail(staff.getEmail());
+		tempStaff.setPhone(staff.getPhone());
+		staffService.updateData(tempStaff);
+		msg = "修改信息成功！";
+		return "staffInfo";
+	}
+	
+	// 更新员工信息
+	@Action("fore_updateStaffPwd")
+	public String updateStaffPwd() {
+		msg = "";
+		int id = staff.getId();
+		Staff tempStaff = (Staff) staffService.getData(id);
+		tempStaff.setPwd(staff.getPwd());
+		staffService.updateData(tempStaff);
+		msg = "修改密码成功！";
+		return "staffInfo";
+	}
+	
+	// 添加菜品信息
+	@Action("fore_addFood")
+	public String foreAddFood() {
+		msg = "";
+		Date date = new Date(new java.util.Date().getTime());
+		food.setDate(date);
+		foodService.addData(food);
+		File imageFolder = new File(ServletActionContext.getServletContext().getRealPath("img/food"));
+		// 上传图片
+		File file = new File(imageFolder, "food_" + food.getId() + ".jpg");
+		try {
+			FileUtils.copyFile(img, file);
+			BufferedImage img = ImageUtil.change2jpg(file);
+			ImageIO.write(img, "jpg", file);
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		msg = "添加菜品成功！";
+		return "staffAddFood";
+	}
+	
 }

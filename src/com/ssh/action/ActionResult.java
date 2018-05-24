@@ -7,8 +7,8 @@ import org.apache.struts2.convention.annotation.Results;
 
 /**TODO
  * @author：Alice
- * @date: 2018年5月24日
- * @version 0.0.7
+ * @date: 2018年5月25日
+ * @version 0.0.8
  * @description：继承ActionParameter，专注于处理JSP返回页面以及路径映射
  */
 @Namespace("/")
@@ -23,6 +23,8 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "adminLogin", location = "/adminLogin.jsp"),
 	@Result(name = "register", location = "/register.jsp"),
 	@Result(name = "memberInfo", location = "/memberInfo.jsp"),
+	@Result(name = "staffInfo", location = "/staffInfo.jsp"),
+	@Result(name = "staffAddFood", location = "/staffAddFood.jsp"),
 	@Result(name = "admin", location = "/admin/debug.jsp"),
 	
 	/* 会员信息路由 */

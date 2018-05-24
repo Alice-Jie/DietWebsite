@@ -8,11 +8,11 @@
     <ul class="layui-nav nav-user">
         <c:if test="${!empty staff}">
             <li class="layui-nav-item">
-                <a href="">${staff.name}</a>
+                <a href="staffInfo.jsp">${staff.name}</a>
             </li>
             <li class="layui-nav-item">
                 <a href="">退出</a>
-            </li>   
+            </li>
         </c:if> 
         <c:if test="${!empty member}">
             <li class="layui-nav-item">
@@ -20,7 +20,7 @@
             </li>
             <li class="layui-nav-item">
                 <a href="fore_Logout">退出</a>
-            </li>   
+            </li>
         </c:if>
         <c:if test="${(empty staff && empty member)}">
 	        <li class="layui-nav-item">
@@ -28,7 +28,10 @@
 	        </li>
 	        <li class="layui-nav-item">
 	            <a href="register.jsp">注册</a>
-	        </li>    
+	        </li>
+	        <li class="layui-nav-item">
+                <a href="staffLogin.jsp">后台</a>
+            </li>
         </c:if>
     </ul>
 </div>

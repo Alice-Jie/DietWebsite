@@ -25,22 +25,17 @@
 <!-- 主体 -->
 <div class="layui-main member-main">
     <!-- 左侧导航栏 -->
-    <%@include file="../include/memberPwd.jsp" %>
+    <%@include file="../include/staffLeftNav.jsp" %>
 	<!-- 右侧显示内容 -->
 	<div class="member-panel">
 	    <div class="layui-tab layui-tab-brief">
 	        <ul class="layui-tab-title">
 	            <li class="layui-this">个人资料</li>
-	            <li>修改密码</li>
 	        </ul>
 	        <div class="layui-tab-content">
-	            <!-- 个人资料 -->
+	            <!-- 添加菜品 -->
 	            <div class="layui-tab-item layui-show">
-	                <%@include file="../include/memberDetail.jsp" %>
-	            </div>
-	            <!-- 修改密码 -->
-	            <div class="layui-tab-item">
-	                <%@include file="../include/memberPwd.jsp" %>
+	                <%@include file="../include/addFood.jsp" %>
 	            </div>
 	        </div>
 	    </div>
@@ -54,6 +49,16 @@
     layui.config({
         base: 'js/' // 模块的目录
     }).use('index');   // 加载入口
+</script>
+<script>
+$(function(){
+    <c:if test="${!empty msg}">
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        layer.msg('${msg}');
+    });
+    </c:if>
+})
 </script>
 </body>
 </html>
