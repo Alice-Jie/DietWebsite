@@ -50,8 +50,8 @@
 </div>
 <script>
     layui.config({
-        base: 'js/' // 模块的目录
-    }).use('index');   // 加载入口
+        base: 'js/'   // 模块的目录
+    }).use('index');  // 加载入口
 </script>
 <script>
 $(function(){

@@ -72,4 +72,28 @@ public class ForeAction extends ActionResult {
 	    ActionContext.getContext().getSession().remove("member");
 	    return "homePage"; 
 	}
+	
+	// 更新会员信息
+	@Action("fore_updateMemberInfo")
+	public String updateMemberInfo() {
+		int id = member.getId();
+		Member tempMember = (Member) memberService.getData(id);
+		tempMember.setSex(member.getSex());
+		tempMember.setEmail(member.getEmail());
+		tempMember.setPhone(member.getPhone());;
+		memberService.updateData(tempMember);
+		msg = "修改信息成功！";
+		return "memberInfo";
+	}
+	
+	// 更新会员信息
+	@Action("fore_updateMemberPwd")
+	public String updateMemberPwd() {
+		int id = member.getId();
+		Member tempMember = (Member) memberService.getData(id);
+		tempMember.setPwd(member.getPwd());;
+		memberService.updateData(tempMember);
+		msg = "修改密码成功！";
+		return "memberInfo";
+	}
 }

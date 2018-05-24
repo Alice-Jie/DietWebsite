@@ -20,6 +20,7 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "foodDetail", location = "/detail.jsp"),
 	@Result(name = "login", location = "/login.jsp"),
 	@Result(name = "register", location = "/register.jsp"),
+	@Result(name = "memberInfo", location = "/memberInfo.jsp"),
 	
 	/* 会员信息路由 */
 	@Result(name = "memberList", location = "/admin/memberList.jsp"),

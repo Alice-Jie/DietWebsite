@@ -8,7 +8,7 @@
     <ul class="layui-nav nav-user">
         <c:if test="${!empty member}">
             <li class="layui-nav-item">
-                <a href="home">${member.name}</a>
+                <a href="memberInfo.jsp">${member.name}</a>
             </li>
             <li class="layui-nav-item">
                 <a href="fore_Logout">退出</a>
