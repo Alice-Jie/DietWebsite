@@ -12,8 +12,8 @@ import com.ssh.entity.*;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月21日
- * @version 0.0.1
+ * @date: 2018年5月24日
+ * @version 0.0.4
  * @description：继承ActionResult，专注于处理Controller
  */
 public class ForeAction extends ActionResult {
@@ -45,6 +45,7 @@ public class ForeAction extends ActionResult {
 	        return "login";
 	    }
 	    ActionContext.getContext().getSession().put("member", member_session);
+	    msg= "";
 	    return "homePage";
 	}
 	
@@ -63,6 +64,7 @@ public class ForeAction extends ActionResult {
  		 Date date = new Date(new java.util.Date().getTime());
  		 member.setDate(date);
          memberService.addData(member);
+         msg= "";
          return "homePage";
 	}
 	
@@ -71,6 +73,49 @@ public class ForeAction extends ActionResult {
 	public String logout() {
 	    ActionContext.getContext().getSession().remove("member");
 	    return "homePage"; 
+	}
+	
+	// 员工登录
+	@Action("fore_staffLogin")
+	public String foreStffLogin() {
+		System.out.println("fore_staffLogin");
+		// 通过HtmlUtils.htmlEscape进行转义
+		String account = HtmlUtils.htmlEscape(staff.getAccount());
+	    staff.setAccount(account);
+	    Staff staff_session = staffService.matchAccount(staff.getAccount(), staff.getPwd());
+	    System.out.println(staff.getPwd());
+	    System.out.println(staff.getAccount());
+	    System.out.println(staff_session);
+	    if(null == staff_session) {
+	        msg= "员工账号或密码错误！";
+	        return "staffLogin";
+	    }
+	    ActionContext.getContext().getSession().put("staff", staff_session);
+	    msg= "";
+	    return "homePage";
+	}
+	
+	// 退出
+	@Action("fore_staffLogout")
+	public String foreStaffLogout() {
+	    ActionContext.getContext().getSession().remove("staff");
+	    return "homePage"; 
+	}
+	
+	// 管理员登录
+	@Action("fore_adminLogin")
+	public String foreAdminLogin() {
+		// 通过HtmlUtils.htmlEscape进行转义
+		String account = HtmlUtils.htmlEscape(administrator.getAccount());
+		administrator.setAccount(account);
+	    Admin admin_session = adminService.matchAccount(administrator.getAccount(), administrator.getPwd());
+	    if(null == admin_session) {
+	        msg= "管理员账号或密码错误！";
+	        return "adminLogin";
+	    }
+	    ActionContext.getContext().getSession().put("admin", admin_session);
+	    msg= "";
+	    return "admin";
 	}
 	
 	// 更新会员信息

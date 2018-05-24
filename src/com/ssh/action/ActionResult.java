@@ -7,8 +7,8 @@ import org.apache.struts2.convention.annotation.Results;
 
 /**TODO
  * @author：Alice
- * @date: 2018年5月23日
- * @version 0.0.6
+ * @date: 2018年5月24日
+ * @version 0.0.7
  * @description：继承ActionParameter，专注于处理JSP返回页面以及路径映射
  */
 @Namespace("/")
@@ -19,8 +19,11 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "homePage", type = "redirect", location = "/fore_home"),
 	@Result(name = "foodDetail", location = "/detail.jsp"),
 	@Result(name = "login", location = "/login.jsp"),
+	@Result(name = "staffLogin", location = "/staffLogin.jsp"),
+	@Result(name = "adminLogin", location = "/adminLogin.jsp"),
 	@Result(name = "register", location = "/register.jsp"),
 	@Result(name = "memberInfo", location = "/memberInfo.jsp"),
+	@Result(name = "admin", location = "/admin/debug.jsp"),
 	
 	/* 会员信息路由 */
 	@Result(name = "memberList", location = "/admin/memberList.jsp"),
