@@ -1,1 +1,1 @@
-INSERT INTO `admin` VALUES (1, 'Alice', 'adimin123');
+INSERT INTO `admin` VALUES (1, 'Alice', 'admin123');

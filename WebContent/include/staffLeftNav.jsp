@@ -10,7 +10,7 @@
     </li>
     <li class="layui-nav-item">
         <a href="staffAddFood.jsp">
-            <i class="layui-icon">&#xe6b2;</i>
+            <i class="layui-icon">&#xe62e;</i>
             <cite> 添加菜品</cite>
         </a>
     </li>

@@ -25,7 +25,7 @@
 <!-- 主体 -->
 <div class="layui-main member-main">
     <!-- 左侧导航栏 -->
-    <%@include file="../include/memberPwd.jsp" %>
+    <%@include file="../include/memberLeftNav.jsp" %>
 	<!-- 右侧显示内容 -->
 	<div class="member-panel">
 	    <div class="layui-tab layui-tab-brief">

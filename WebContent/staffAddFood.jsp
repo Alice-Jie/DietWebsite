@@ -30,7 +30,7 @@
 	<div class="member-panel">
 	    <div class="layui-tab layui-tab-brief">
 	        <ul class="layui-tab-title">
-	            <li class="layui-this">个人资料</li>
+	            <li class="layui-this">添加菜品</li>
 	        </ul>
 	        <div class="layui-tab-content">
 	            <!-- 添加菜品 -->
