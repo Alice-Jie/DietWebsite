@@ -23,6 +23,7 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "adminLogin", location = "/adminLogin.jsp"),
 	@Result(name = "register", location = "/register.jsp"),
 	@Result(name = "memberInfo", location = "/memberInfo.jsp"),
+	@Result(name = "editDietReport", location = "/editDiet.jsp"),
 	@Result(name = "staffInfo", location = "/staffInfo.jsp"),
 	@Result(name = "staffAddFood", location = "/staffAddFood.jsp"),
 	@Result(name = "admin", location = "/admin/debug.jsp"),

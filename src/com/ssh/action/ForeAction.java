@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.ssh.entity.*;
 
 import com.ssh.util.ImageUtil;
+import com.ssh.util.DietReport;
 
 /**
  * TODO
@@ -27,13 +28,24 @@ import com.ssh.util.ImageUtil;
  */
 public class ForeAction extends ActionResult {
 
+	protected DietReport dietReport;  // 饮食报告对象
+	
+	/* setter、getter */
+	public DietReport getDietReport() {
+		return dietReport;
+	}
+
+	public void setDietReport(DietReport dietReport) {
+		this.dietReport = dietReport;
+	}
+	
 	// 前台信息列表
 	@Action("fore_home")
 	public String infoList() {
 		foods = foodService.getDataList();
 		return "home";
 	}
-	
+
 	// 查看菜品信息
 	@Action("fore_foodDetail")
 	public String foodDetail() {
@@ -195,6 +207,13 @@ public class ForeAction extends ActionResult {
 		}
 		msg = "添加菜品成功！";
 		return "staffAddFood";
+	}
+	
+	// 饮食信息列表
+	@Action("report_dietList")
+	public String reportDietList() {
+		foods = foodService.getDataList();
+		return "editDietReport";
 	}
 	
 }

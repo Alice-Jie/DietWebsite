@@ -44,7 +44,7 @@
                         <td><a href="../admin_editFood?food.id=${food.id}"><i class="layui-icon">&#xe642;</i></a></td>
                         <td><a href="../admin_delFood?food.id=${food.id}"><i class="layui-icon">&#xe640;</i></a></td>
 			        </tr>
-			        </c:forEach>
+		        </c:forEach>
 			    </tbody>
 			</table>
         </div>

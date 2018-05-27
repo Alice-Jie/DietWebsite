@@ -9,7 +9,7 @@
         </a>
     </li>
     <li class="layui-nav-item">
-        <a href="/">
+        <a href="report_dietList">
             <i class="layui-icon">&#xe6b2;</i>
             <cite> 健康档案</cite>
         </a>
