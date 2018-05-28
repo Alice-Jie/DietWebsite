@@ -24,6 +24,10 @@ public class ActionEntity extends ActionPage {
 	protected Admin administrator;         // 管理员
 	protected List<Admin> administrators;  // 管路员列表
 	
+	protected Food moring;                 // 早餐
+	protected Food noon;                   // 午餐
+	protected Food evening;                // 晚餐
+	
 	/* setter、getter */
 
 	public Member getMember() {
@@ -90,4 +94,28 @@ public class ActionEntity extends ActionPage {
 		this.administrators = administrators;
 	}
 
+	public Food getMoring() {
+		return moring;
+	}
+
+	public void setMoring(Food moring) {
+		this.moring = moring;
+	}
+
+	public Food getNoon() {
+		return noon;
+	}
+
+	public void setNoon(Food noon) {
+		this.noon = noon;
+	}
+
+	public Food getEvening() {
+		return evening;
+	}
+
+	public void setEvening(Food evening) {
+		this.evening = evening;
+	}
+	
 }

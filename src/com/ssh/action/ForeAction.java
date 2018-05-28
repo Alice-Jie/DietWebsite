@@ -216,4 +216,34 @@ public class ForeAction extends ActionResult {
 		return "editDietReport";
 	}
 	
+	// 获取饮食信息
+	@Action("report_getDietData")
+	public String getDietData() {
+		int id = 0;
+		String [] str = ServletActionContext.getRequest().getParameterValues("report");
+		// 早餐数据
+		id = Integer.parseInt(str[0], 10);
+		moring = (Food) foodService.getData(id);
+		// 午餐数据
+		id = Integer.parseInt(str[1], 10);
+		noon = (Food) foodService.getData(id);
+		// 晚餐数据
+		id = Integer.parseInt(str[2], 10);
+		evening = (Food) foodService.getData(id);
+		// 获取会员信息
+		id = member.getId();
+		member = (Member) memberService.getData(id);
+		// 记录会员饮食信息
+		member.setProtein((moring.getProtein() + noon.getProtein() + evening.getProtein()) / 3);
+		member.setCarbohydrate((moring.getCarbohydrate() + noon.getCarbohydrate() + evening.getCarbohydrate()) / 3);
+		member.setFat((moring.getFat() + noon.getFat() + evening.getFat()) / 3);
+		member.setDietaryFiber((moring.getDietaryFiber() + noon.getDietaryFiber() + evening.getDietaryFiber()) / 3);
+		member.setMoisture((moring.getMoisture() + noon.getMoisture() + evening.getMoisture()) / 3);
+		memberService.updateData(member);
+		ActionContext.getContext().getSession().put("member", member);
+		// 饮食报告对象初始化
+		dietReport = new DietReport(member.getProtein(), member.getCarbohydrate(), member.getFat(), member.getDietaryFiber(), member.getMoisture());
+		dietReport.setDietReport();
+		return "dietReport";
+	}
 }

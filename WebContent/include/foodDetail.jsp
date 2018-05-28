@@ -28,13 +28,12 @@
         </div>
     </div>
     <!-- 描述部分 -->
-        <div class="detail-desc">
-            <div class="info-title">
-                <h1>描述：</h1>
-            </div>
-            <div class="desc-main">
-                <p>这款三明治可爱，简单，不会做饭的人也绝对会做，并且喜欢的简单料理！</p>
-            </div>
+    <div class="detail-desc">
+        <div class="info-title">
+            <h1>描述：</h1>
+        </div>
+        <div class="desc-main">
+            <p>这款三明治可爱，简单，不会做饭的人也绝对会做，并且喜欢的简单料理！</p>
         </div>
     </div>
 </div>
