@@ -12,6 +12,28 @@
                 <li class="layui-timeline-item">
                   <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
                     <div class="layui-timeline-content layui-text">
+                        <h3 class="layui-timeline-title">2018年5月28日</h3>
+                        <p>更新健康档案JSP页面和对应功能编写</p>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                    <div class="layui-timeline-content layui-text">
+                        <h3 class="layui-timeline-title">2018年5月24日</h3>
+                        <p>更新个人中心JSP页面和对应功能编写
+                        </br>更新员工&管理员登录JSP页面和对应功能编写</p>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                    <div class="layui-timeline-content layui-text">
+                        <h3 class="layui-timeline-title">2018年5月24日</h3>
+                        <p>更新前台菜品信息JSP页面和对应功能编写</p>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                    <div class="layui-timeline-content layui-text">
                         <h3 class="layui-timeline-title">2018年5月21日</h3>
                         <p>完成前台菜品信息JSP编写<br>修复后台会员信息编辑链接错误问题</p>
                     </div>
@@ -19,22 +41,8 @@
                 <li class="layui-timeline-item">
                   <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
                     <div class="layui-timeline-content layui-text">
-                        <h3 class="layui-timeline-title">2018年5月20日</h3>
-                        <p>编写前台静态页面</p>
-                    </div>
-                </li>
-                <li class="layui-timeline-item">
-                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                    <div class="layui-timeline-content layui-text">
                         <h3 class="layui-timeline-title">2018年5月19日</h3>
                         <p>完成前台首页JSP编写<br>更新数据库信息</p>
-                    </div>
-                </li>
-                <li class="layui-timeline-item">
-                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                    <div class="layui-timeline-content layui-text">
-                        <h3 class="layui-timeline-title">2018年5月17日</h3>
-                        <p>编写前台静态首页</p>
                     </div>
                 </li>
                 <li class="layui-timeline-item">

@@ -3,6 +3,7 @@
 
 <div class="layui-carousel" id="dietcarousel">
     <div carousel-item>
+        <%-- 需要添加<a>标签，进入对应食物的详细页面 --%>
 	    <div><img src="img/banner_1.jpg"></div>
 	    <div><img src="img/banner_2.jpg"></div>
 	    <div><img src="img/banner_3.jpg"></div>
