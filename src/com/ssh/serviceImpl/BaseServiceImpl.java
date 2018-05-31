@@ -17,8 +17,8 @@ import java.util.Set;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月22日
- * @version 0.0.3
+ * @date: 2018年5月30日
+ * @version 0.0.4
  * @description：实现业务层BaseService接口
  */
 @Service
@@ -163,6 +163,14 @@ public class BaseServiceImpl implements BaseService {
 		}
 		query.addOrder(Order.desc("id")); // 根据ID排序
 		return dao.findByCriteria(query);
+	}
+	
+	/** 搜索数据 */
+	@Override
+	public List<Object> searchList(String keyWord) {
+        DetachedCriteria query = DetachedCriteria.forClass(cl);
+        query.add(Restrictions.like("name", "%"+ keyWord + "%"));
+        return dao.findByCriteria(query);
 	}
 
 	/** 更新数据 */

@@ -5,6 +5,7 @@
     <div class='diet-logo'>
         <a href="fore_home"></a>
     </div>
+    <%@include file="../include/search.jsp"%>
     <ul class="layui-nav nav-user">
         <c:if test="${!empty staff}">
             <li class="layui-nav-item">

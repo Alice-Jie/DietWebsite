@@ -4,8 +4,8 @@ import java.util.List;
 
 /**TODO
  * @author：Alice
- * @date: 2018年5月21日
- * @version 0.0.2
+ * @date: 2018年5月30日
+ * @version 0.0.4
  * @description：在业务层提供访问DAO层Service接口
  */
 public interface BaseService {
@@ -36,6 +36,9 @@ public interface BaseService {
 	
 	/** 获取数据列表 */
 	public List getDataList(Object... pairParms);
+	
+	/** 搜索数据 */
+	public<Object> List searchList(String keyWord);
 	
 	/** 更新数据 */
 	public void updateData(Object obj);

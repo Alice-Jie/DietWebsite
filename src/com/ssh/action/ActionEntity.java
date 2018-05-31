@@ -6,8 +6,8 @@ import com.ssh.entity.*;
 
 /**TODO
  * @author：Alice
- * @date: 2018年5月15日
- * @version 0.0.3
+ * @date: 2018年5月30日
+ * @version 0.0.4
  * @description：继承ActionPage，专注于处理实体对象以及实体对象集合的setter和getter
  */
 public class ActionEntity extends ActionPage {
@@ -27,6 +27,8 @@ public class ActionEntity extends ActionPage {
 	protected Food moring;                 // 早餐
 	protected Food noon;                   // 午餐
 	protected Food evening;                // 晚餐
+	
+	protected String keyWord;              // 关键词
 	
 	/* setter、getter */
 
@@ -116,6 +118,14 @@ public class ActionEntity extends ActionPage {
 
 	public void setEvening(Food evening) {
 		this.evening = evening;
+	}
+
+	public String getKeyWord() {
+		return keyWord;
+	}
+
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
 	}
 	
 }

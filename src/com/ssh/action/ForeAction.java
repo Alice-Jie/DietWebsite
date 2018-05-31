@@ -22,8 +22,8 @@ import com.ssh.util.DietReport;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月25日
- * @version 0.0.5
+ * @date: 2018年5月30日
+ * @version 0.0.6
  * @description：继承ActionResult，专注于处理Controller
  */
 public class ForeAction extends ActionResult {
@@ -52,6 +52,16 @@ public class ForeAction extends ActionResult {
 		int id = food.getId();
 		food = (Food) foodService.getData(id);
 		return "foodDetail";
+	}
+	
+	// 搜索菜品信息
+	@Action("fore_foodSearch") 
+	public String foodSearch() {
+		foods = foodService.searchList(keyWord);
+		for (Food food : foods) {
+			System.out.println(food);
+		}
+		return "home";
 	}
 	
 	// 登录
