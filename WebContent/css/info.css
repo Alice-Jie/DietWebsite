@@ -34,7 +34,7 @@
  ———————————————————————————————————————————————————————————————————————————— */
 
 .site-title {
-    margin: 30px 0 20px;
+    margin: 0;
 }
 
 .site-title fieldset {
@@ -44,8 +44,7 @@
 }
 
 .site-title fieldset legend {
-    margin-left: 20px;
-    padding: 0 10px;
+    padding: 10px 10px;
     font-size: 22px;
     font-weight: 300;
 }
@@ -55,6 +54,7 @@
 }
 
 .site-text p {
+	padding: 10px 10px;
     margin-bottom: 10px;
     line-height: 22px;
 }

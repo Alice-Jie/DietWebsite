@@ -33,7 +33,7 @@
             <h1>描述：</h1>
         </div>
         <div class="desc-main">
-            <p>这款三明治可爱，简单，不会做饭的人也绝对会做，并且喜欢的简单料理！</p>
+            <p>${food.description}</p>
         </div>
     </div>
 </div>

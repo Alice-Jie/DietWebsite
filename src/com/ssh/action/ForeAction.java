@@ -28,8 +28,8 @@ import com.ssh.util.DietReport;
  */
 public class ForeAction extends ActionResult {
 
-	protected DietReport dietReport;  // 饮食报告对象
-	
+	protected DietReport dietReport; // 饮食报告对象
+
 	/* setter、getter */
 	public DietReport getDietReport() {
 		return dietReport;
@@ -38,7 +38,7 @@ public class ForeAction extends ActionResult {
 	public void setDietReport(DietReport dietReport) {
 		this.dietReport = dietReport;
 	}
-	
+
 	// 前台信息列表
 	@Action("fore_home")
 	public String infoList() {
@@ -53,98 +53,95 @@ public class ForeAction extends ActionResult {
 		food = (Food) foodService.getData(id);
 		return "foodDetail";
 	}
-	
+
 	// 搜索菜品信息
-	@Action("fore_foodSearch") 
+	@Action("fore_foodSearch")
 	public String foodSearch() {
 		foods = foodService.searchList(keyWord);
-		for (Food food : foods) {
-			System.out.println(food);
-		}
 		return "home";
 	}
-	
+
 	// 登录
 	@Action("fore_login")
 	public String foreLogin() {
 		// 通过HtmlUtils.htmlEscape进行转义
 		String account = HtmlUtils.htmlEscape(member.getAccount());
-	    member.setAccount(account);
-	    Member member_session = memberService.matchAccount(member.getAccount(), member.getPwd());
-	    if(null == member_session) {
-	        msg= "账号或密码错误！";
-	        return "login";
-	    }
-	    ActionContext.getContext().getSession().put("member", member_session);
-	    msg= "";
-	    return "homePage";
+		member.setAccount(account);
+		Member member_session = memberService.matchAccount(member.getAccount(), member.getPwd());
+		if (null == member_session) {
+			msg = "账号或密码错误！";
+			return "login";
+		}
+		ActionContext.getContext().getSession().put("member", member_session);
+		msg = "";
+		return "homePage";
 	}
-	
+
 	// 注册
 	@Action("fore_register")
 	public String foreRegister() {
 		// 通过HtmlUtils.htmlEscape进行转义
 		String account = HtmlUtils.htmlEscape(member.getAccount());
-	    // 判断账户是否存在
-	    boolean isExist = memberService.isAccount(account);
-         if(isExist) {
-             msg = "用户名已经被使用,不能使用";
-             return "register"; 
-         }
-         member.setAccount(account);
- 		 Date date = new Date(new java.util.Date().getTime());
- 		 member.setDate(date);
-         memberService.addData(member);
-         msg= "";
-         return "homePage";
+		// 判断账户是否存在
+		boolean isExist = memberService.isAccount(account);
+		if (isExist) {
+			msg = "用户名已经被使用,不能使用";
+			return "register";
+		}
+		member.setAccount(account);
+		Date date = new Date(new java.util.Date().getTime());
+		member.setDate(date);
+		memberService.addData(member);
+		msg = "";
+		return "homePage";
 	}
-	
+
 	// 退出
 	@Action("fore_Logout")
 	public String logout() {
-	    ActionContext.getContext().getSession().remove("member");
-	    return "homePage"; 
+		ActionContext.getContext().getSession().remove("member");
+		return "homePage";
 	}
-	
+
 	// 员工登录
 	@Action("fore_staffLogin")
 	public String foreStffLogin() {
 		// 通过HtmlUtils.htmlEscape进行转义
 		String account = HtmlUtils.htmlEscape(staff.getAccount());
-	    staff.setAccount(account);
-	    Staff staff_session = staffService.matchAccount(staff.getAccount(), staff.getPwd());
-	    if(null == staff_session) {
-	        msg= "员工账号或密码错误！";
-	        return "staffLogin";
-	    }
-	    ActionContext.getContext().getSession().put("staff", staff_session);
-	    msg= "";
-	    return "homePage";
+		staff.setAccount(account);
+		Staff staff_session = staffService.matchAccount(staff.getAccount(), staff.getPwd());
+		if (null == staff_session) {
+			msg = "员工账号或密码错误！";
+			return "staffLogin";
+		}
+		ActionContext.getContext().getSession().put("staff", staff_session);
+		msg = "";
+		return "homePage";
 	}
-	
+
 	// 退出
 	@Action("fore_staffLogout")
 	public String foreStaffLogout() {
-	    ActionContext.getContext().getSession().remove("staff");
-	    return "homePage"; 
+		ActionContext.getContext().getSession().remove("staff");
+		return "homePage";
 	}
-	
+
 	// 管理员登录
 	@Action("fore_adminLogin")
 	public String foreAdminLogin() {
 		// 通过HtmlUtils.htmlEscape进行转义
 		String account = HtmlUtils.htmlEscape(administrator.getAccount());
 		administrator.setAccount(account);
-	    Admin admin_session = adminService.matchAccount(administrator.getAccount(), administrator.getPwd());
-	    if(null == admin_session) {
-	        msg= "管理员账号或密码错误！";
-	        return "adminLogin";
-	    }
-	    ActionContext.getContext().getSession().put("admin", admin_session);
-	    msg= "";
-	    return "admin";
+		Admin admin_session = adminService.matchAccount(administrator.getAccount(), administrator.getPwd());
+		if (null == admin_session) {
+			msg = "管理员账号或密码错误！";
+			return "adminLogin";
+		}
+		ActionContext.getContext().getSession().put("admin", admin_session);
+		msg = "";
+		return "admin";
 	}
-	
+
 	// 更新会员信息
 	@Action("fore_updateMemberInfo")
 	public String updateMemberInfo() {
@@ -158,7 +155,7 @@ public class ForeAction extends ActionResult {
 		msg = "修改信息成功！";
 		return "memberInfo";
 	}
-	
+
 	// 更新会员信息
 	@Action("fore_updateMemberPwd")
 	public String updateMemberPwd() {
@@ -170,7 +167,7 @@ public class ForeAction extends ActionResult {
 		msg = "修改密码成功！";
 		return "memberInfo";
 	}
-	
+
 	// 更新员工信息
 	@Action("fore_updateStaffInfo")
 	public String updateStaffInfo() {
@@ -184,7 +181,7 @@ public class ForeAction extends ActionResult {
 		msg = "修改信息成功！";
 		return "staffInfo";
 	}
-	
+
 	// 更新员工信息
 	@Action("fore_updateStaffPwd")
 	public String updateStaffPwd() {
@@ -196,7 +193,7 @@ public class ForeAction extends ActionResult {
 		msg = "修改密码成功！";
 		return "staffInfo";
 	}
-	
+
 	// 添加菜品信息
 	@Action("fore_addFood")
 	public String foreAddFood() {
@@ -218,19 +215,19 @@ public class ForeAction extends ActionResult {
 		msg = "添加菜品成功！";
 		return "staffAddFood";
 	}
-	
+
 	// 饮食信息列表
 	@Action("report_dietList")
 	public String reportDietList() {
 		foods = foodService.getDataList();
 		return "editDietReport";
 	}
-	
+
 	// 获取饮食信息
 	@Action("report_getDietData")
 	public String getDietData() {
 		int id = 0;
-		String [] str = ServletActionContext.getRequest().getParameterValues("report");
+		String[] str = ServletActionContext.getRequest().getParameterValues("report");
 		// 早餐数据
 		id = Integer.parseInt(str[0], 10);
 		moring = (Food) foodService.getData(id);
@@ -252,7 +249,8 @@ public class ForeAction extends ActionResult {
 		memberService.updateData(member);
 		ActionContext.getContext().getSession().put("member", member);
 		// 饮食报告对象初始化
-		dietReport = new DietReport(member.getProtein(), member.getCarbohydrate(), member.getFat(), member.getDietaryFiber(), member.getMoisture());
+		dietReport = new DietReport(member.getProtein(), member.getCarbohydrate(), member.getFat(),
+				member.getDietaryFiber(), member.getMoisture());
 		dietReport.setDietReport();
 		return "dietReport";
 	}
