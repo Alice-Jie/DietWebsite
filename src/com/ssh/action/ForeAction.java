@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
+import java.util.Collections;
+import java.util.Comparator;
 
 import javax.imageio.ImageIO;
 
@@ -17,18 +19,20 @@ import com.ssh.entity.*;
 
 import com.ssh.util.ImageUtil;
 import com.ssh.util.DietReport;
+import com.ssh.util.Recommend;
 
 /**
  * TODO
  * 
  * @author：Alice
  * @date: 2018年6月04日
- * @version 0.0.7
+ * @version 0.0.8
  * @description：继承ActionResult，专注于处理Controller
  */
 public class ForeAction extends ActionResult {
 
 	protected DietReport dietReport; // 饮食报告对象
+	protected Recommend recommend;   // 智能推荐对象
 
 	/* setter、getter */
 	public DietReport getDietReport() {
@@ -43,6 +47,40 @@ public class ForeAction extends ActionResult {
 	@Action("fore_home")
 	public String infoList() {
 		foods = foodService.getDataList();
+		member = (Member) ActionContext.getContext().getSession().get("member");
+		// 判断登录状态
+		if (null != member) {
+			// 初始化推荐对象及会员权重
+			recommend = new Recommend();
+			recommend.setMemberWeight(member.getProtein(), 
+					member.getCarbohydrate(),
+					member.getFat(),
+					member.getDietaryFiber(),
+					member.getMoisture());
+			// 遍历菜品List并生成对应菜品比较权重
+			for (Food food : foods) {
+				// 初始化菜品权重
+				recommend.setFoodWeight(food.getProtein(), 
+						food.getCarbohydrate(),
+						food.getFat(),
+						food.getDietaryFiber(),
+						food.getMoisture());
+				food.setWeight(recommend.getFoodWeightCount());
+				// System.out.println(food.getName() + ":" + food.getWeight());
+			}
+			// 按照菜品比较权重对菜品List进行逆序排列
+			Collections.sort(foods, new Comparator<Food>() {
+				public int compare(Food f1, Food f2) {
+					if (f1.getWeight() < f2.getWeight()) {
+						return 1;
+					}
+					if (f1.getWeight() == f2.getWeight()) {
+						return 0;
+					}
+					return -1;
+				}
+			});
+		}
 		return "home";
 	}
 
@@ -101,8 +139,8 @@ public class ForeAction extends ActionResult {
 	// 会员退出
 	@Action("fore_Logout")
 	public String logout() {
-		ActionContext.getContext().getSession().remove("member");
 		member = null;
+		ActionContext.getContext().getSession().remove("member");
 		return "homePage";
 	}
 
@@ -126,8 +164,8 @@ public class ForeAction extends ActionResult {
 	// 员工退出
 	@Action("fore_staffLogout")
 	public String foreStaffLogout() {
-		ActionContext.getContext().getSession().remove("staff");
 		staff = null;
+		ActionContext.getContext().getSession().remove("staff");
 		return "homePage";
 	}
 

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**TODO
  * @author：Alice
@@ -40,6 +41,8 @@ public class Food {
 	private int dietaryFiber;    // 膳食纤维
 	@Column(name = "FoodMoisture")
 	private int moisture;        // 水分
+	@Transient
+	private Integer weight;      // 权重
 	
 	/* setter、getter */
 
@@ -121,6 +124,14 @@ public class Food {
 
 	public void setMoisture(int moisture) {
 		this.moisture = moisture;
+	}
+	
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
 	}
 
 	/**

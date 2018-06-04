@@ -103,8 +103,6 @@ public class DietReport {
 		this.dietaryFiberStr = "null";
 		this.moistureStr     = "null";
 	}
-	
-
 
 	/** 
 	 * 饮食成分初始化 
@@ -135,7 +133,7 @@ public class DietReport {
 	 * @param defaultNum 参考数值
 	 * @return 报告
 	 */
-	public String getReport(int num, int defaultNum) {
+	private String getReport(int num, int defaultNum) {
 		String str = "";
 		if (num >= defaultNum - 5 && num <= defaultNum + 5) {
 			str = "充足";
