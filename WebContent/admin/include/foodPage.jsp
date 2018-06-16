@@ -17,12 +17,12 @@
 			            <th lay-data="{field:'name', width:'6.25%'}">名称</th>
 			            <th lay-data="{field:'price', width:'6.25%', sort:true}">价格</th>
                         <th lay-data="{field:'description', width:'25%'}">描述</th>
-                        <th lay-data="{field:'date', width:'6.25%'}">日期</th>
-                        <th lay-data="{field:'protein', width:'6.25%'}">蛋白质</th>
-                        <th lay-data="{field:'carbohydrate', width:'6.25%'}">糖类</th>
-                        <th lay-data="{field:'fat', width:'6.25%'}">脂肪</th>
-                        <th lay-data="{field:'dietaryFiber', width:'6.25%'}">膳食纤维</th>
-                        <th lay-data="{field:'moisture', width:'6.25%'}">水分</th>
+                        <th lay-data="{field:'date', width:'6.25%', sort:true}">日期</th>
+                        <th lay-data="{field:'protein', width:'6.25%', sort:true}">蛋白质</th>
+                        <th lay-data="{field:'carbohydrate', width:'6.25%', sort:true}">糖类</th>
+                        <th lay-data="{field:'fat', width:'6.25%', sort:true}">脂肪</th>
+                        <th lay-data="{field:'dietaryFiber', width:'6.25%', sort:true}">膳食纤维</th>
+                        <th lay-data="{field:'moisture', width:'6.25%', sort:true}">水分</th>
                         <th lay-data="{field:'edit', width:'6.25%'}">编辑</th>
                         <th lay-data="{field:'delete', width:'6.25%'}">删除</th>
 			        </tr>

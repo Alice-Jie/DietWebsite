@@ -12,9 +12,9 @@
         <a href="fore_foodDetail?food.id=${food.id}" target="_blank">${food.name}</a>
     </h2>
     <!-- 文字描述 -->
-    <p class="fly-case-desc">${food.description}</p>
+    <p class="diet-case-desc">${food.description}</p>
     <!-- 发布时间 -->
-    <div class="fly-case-info">
+    <div class="diet-case-info">
         <p class="layui-elip">
             <span style="color:#666;">${food.date.toString()}</span>
         </p>

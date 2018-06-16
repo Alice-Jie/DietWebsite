@@ -19,8 +19,8 @@ import com.ssh.util.ImageUtil;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月19日
- * @version 0.0.3
+ * @date: 2018年6月16日
+ * @version 0.0.4
  * @description：继承ActionResult，专注于处理Controller
  */
 public class FoodAction extends ActionResult {
@@ -68,6 +68,8 @@ public class FoodAction extends ActionResult {
 	// 更新菜品信息
 	@Action("admin_updateFood")
 	public String updateFood() {
+		Date date = new Date(new java.util.Date().getTime());
+		food.setDate(date);
 		foodService.updateData(food);
 		// 更新图片
 		if (null != img) {

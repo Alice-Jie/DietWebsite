@@ -47,7 +47,7 @@
     </div>
     <!-- 菜品脂肪 -->
     <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">蛋白质：</label>
+        <label class="layui-form-label">脂 肪：</label>
         <div class="layui-input-block">
             <input type="text" name="food.fat" required  lay-verify="required" placeholder="请输入菜品脂肪含量" autocomplete="off" class="layui-input">
         </div>
@@ -61,7 +61,7 @@
     </div>
     <!-- 菜品水分 -->
     <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">水分：</label>
+        <label class="layui-form-label">水 分：</label>
         <div class="layui-input-block">
             <input type="text" name="food.moisture" required  lay-verify="required" placeholder="请输入菜品水分含量" autocomplete="off" class="layui-input">
         </div>
