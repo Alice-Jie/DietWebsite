@@ -8,5 +8,15 @@
     <!-- spring配置：告知struts2运行时使用spring来创建对象 -->
     <constant name="struts.objectFactory" value="spring"/>
     <package name="mypack" extends="struts-default">
+        <!-- 自定义拦截器 -->
+        <interceptors>
+            <interceptor name="adminInterceptor" class="com.ssh.interceptor.AdminInterceptor"></interceptor>
+            <!-- 拦截器栈 -->
+            <interceptor-stack name="auth-default">
+                <interceptor-ref name="adminInterceptor" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="auth-default"></default-interceptor-ref>
     </package>
  </struts>

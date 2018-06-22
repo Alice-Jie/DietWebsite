@@ -27,7 +27,7 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "dietReport", location = "/dietReport.jsp"),
 	@Result(name = "staffInfo", location = "/staffInfo.jsp"),
 	@Result(name = "staffAddFood", location = "/staffAddFood.jsp"),
-	@Result(name = "admin", location = "/admin/debug.jsp"),
+	@Result(name = "admin", location = "/admin/log.jsp"),
 	
 	/* 会员信息路由 */
 	@Result(name = "memberList", location = "/admin/memberList.jsp"),
@@ -45,9 +45,9 @@ import org.apache.struts2.convention.annotation.Results;
 	@Result(name = "editFood", location = "/admin/editFood.jsp"),
 	
 	/* 管理员信息路由 */
+	@Result(name = "log", location = "/admin/log.jsp"),
 	@Result(name = "adminListPage", type = "redirect", location = "/admin_editAdmin"),
 	@Result(name = "editAdmin", location = "/admin/editAdmin.jsp"),
-	
 })
 public class ActionResult extends ActionParameter {
 

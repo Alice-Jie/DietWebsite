@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 
-<!-- 头像 -->
 <!-- 下拉列表 -->
 <div class="navBar layui-side-scroll" id="navBarId">
     <ul class="layui-nav layui-nav-tree layui-left-nav">
         <li class="layui-nav-item layui-nav-itemed">
-            <a href="../admin/debug.jsp">
+            <a href="../admin_log">
                 <i class="layui-icon">&#xe63c;</i><cite> 更新日志</cite>
             </a>
         </li>

@@ -8,11 +8,17 @@ import com.ssh.entity.Admin;
  * TODO
  * 
  * @author：Alice
- * @date: 2018年5月15日
- * @version 0.0.1
+ * @date: 2018年6月22日
+ * @version 0.0.2
  * @description：继承ActionResult，专注于处理Controller
  */
 public class AdminAction extends ActionResult {
+	// debug
+	@Action("admin_log")
+	public String log() {
+		return "log";
+	}
+	
 	// 编辑员工信息
 	@Action("admin_editAdmin")
 	public String editStaff() {

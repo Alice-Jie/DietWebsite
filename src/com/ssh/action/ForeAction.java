@@ -185,6 +185,14 @@ public class ForeAction extends ActionResult {
 		ActionContext.getContext().getSession().put("admin", admin_session);
 		return "admin";
 	}
+	
+	// 管理员退出
+	@Action("fore_adminLogout")
+	public String foreAdminLogout() {
+		administrator = null;
+		ActionContext.getContext().getSession().remove("admin");
+		return "homePage";
+	}
 
 	// 更新会员信息
 	@Action("fore_updateMemberInfo")
