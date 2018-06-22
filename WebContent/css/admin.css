@@ -1,14 +1,16 @@
+.layui-layout-admin .header {
+	background-color: #393D49;
+}
+
 .header .layui-main {
 	margin: 0;
 }
 
 .nav-user {
-    float: right;
+	float: right;
 }
 
-.footer {
-	padding: 30px 0;
-	line-height: 30px;
+.layui-layout-admin .footer {
 	text-align: center;
 	color: #666;
 	font-weight: 300;

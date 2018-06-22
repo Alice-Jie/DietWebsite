@@ -31,7 +31,7 @@
         <%@include file="../admin/include/staffForm.jsp" %>
     </div>
     <!-- 底部 -->
-    <div class="layui-footer footer layui-bg-black">
+    <div class="layui-footer footer">
         <%@include file="../admin/include/footer.jsp" %>
     </div>
 </div>
