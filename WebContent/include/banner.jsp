@@ -12,8 +12,8 @@
         </div>
         -->
         <div><a href="fore_foodDetail?food.id=1" target="_blank"><img src="img/banner_1.jpg"></a></div>
-        <div><a href="fore_foodDetail?food.id=2" target="_blank"><img src="img/banner_2.jpg"></a></div>
-        <div><a href="fore_foodDetail?food.id=3" target="_blank"><img src="img/banner_3.jpg"></a></div>
+        <div><a href="fore_foodDetail?food.id=5" target="_blank"><img src="img/banner_2.jpg"></a></div>
+        <div><a href="fore_foodDetail?food.id=2" target="_blank"><img src="img/banner_3.jpg"></a></div>
     </div>
 </div>
 <script>

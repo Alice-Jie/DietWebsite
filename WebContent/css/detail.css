@@ -79,20 +79,20 @@
 }
 
 .info-main-right .nutrition {
-    font-size: 12px;
+    font-size: 16px;
     color: #8f98aa;
     margin-top: 20px;
 }
 
 .info-main-right .nutrition .desc {
     float: left;
-    width: 7.5%;
+    width: 10%;
     line-height: 64px;
 }
 
 .info-main-right .nutrition .num {
     float: left;
-    width: 42.5%;
+    width: 40%;
     line-height: 64px;
 }
 

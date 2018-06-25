@@ -1,3 +1,3 @@
 <% 
-    response.sendRedirect("../admin/debug.jsp");
+    response.sendRedirect("../admin/log.jsp");
 %>
